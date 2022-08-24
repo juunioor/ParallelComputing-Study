@@ -12,32 +12,27 @@ int tamanhoArray(char str[]){
 }
 
 int main(){
-  char str[100] = "matheus";
+  char str[100];
   cout << "Digite uma string: ";
-  
+  cin >> str;
 
-  int posicao_char = 2;
-  cout << "Digite a posição do caracter que você deseja que seja substituido: ";
+  int posicao_char;
+  cout << "Digite a posição do caracter que você deseja que seja inserido: ";
+  cin >> posicao_char;
 
-  char caracter = 'x';
+  char caracter;
   cout << "Digite o caractere que irá entrar na posição que você digitou: ";
+  cin >> caracter;
 
   int tamanho_array = tamanhoArray(str);
   
   // laço para inserir o caracter
-  for(int i = posicao_char; i < tamanho_array+1; i++){
-    if (i == tamanho_array){ //se chegar final do array
-      str[i] = '\0'; 
-    } else {
-      // troca a posição "i" pelo da frente
-      char aux = str[i];
-      char aux_2 = str[i+1];
+  for(int i = tamanho_array; i >= posicao_char; i--){ // percorre o array do final pro começo
+    if (i == posicao_char){ // quando chega na posição desejada
       str[i] = caracter;
-      str[i+1] = aux;
-      str[i+2] = aux_2;
-    }
-  } 
-
+    } else {
+      str[i] = str[i-1];
+    }  
+  }
   cout << str;
-  
 }
