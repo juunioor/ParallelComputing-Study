@@ -5,7 +5,7 @@ int retornaPosicao(string string_usuario, char caracter_usuario){
   int tamanho_string = sizeof(string_usuario)/sizeof(string_usuario[0]); 
   for(int i = 0; i < tamanho_string; i++){
     if (string_usuario[i] == caracter_usuario){
-      return i+1;  
+      return i;  
     }
   }
   return -1;
