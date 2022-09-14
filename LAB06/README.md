@@ -6,7 +6,7 @@ Entradas do teste:
 Matriz = {{1,7,5,8},{1,9,2,3},{1,6,5,4},{2,3,9,2}};  
 Vetor = {5,6,3,1};  
 
-Saída do teste:
+Saída do teste:  
 Thread 0 fazendo sua operação!  
 Thread 2 fazendo sua operação!  
 Thread 1 fazendo sua operação!  
