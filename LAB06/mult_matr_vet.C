@@ -53,6 +53,8 @@ void *Pth_mat_vect(void *rank){
             y[i] += A[i][j]*x[j];
         }
     }
+    
+    printf("Thread %ld fazendo sua operação!\n", my_rank);
 
     return NULL;
 }
