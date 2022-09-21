@@ -1,4 +1,9 @@
 ***
+Programa desenvolvido com o auxílio dos materiais de aula.  
+Compilado no GDB online Debugger.  
+Necessita de entrada de argumento na linha de comando.  
+  
+
 > #### TESTE COM N = 10^5 E 1 THREAD  
     
 ![image](https://user-images.githubusercontent.com/62557235/191621426-bc9f4593-ccd2-42cf-a600-deb71d29be24.png)  
