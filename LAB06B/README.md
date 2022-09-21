@@ -6,3 +6,4 @@
 > TESTE COM N = 10^5 E 2 THREADS  
    
 ![image](https://user-images.githubusercontent.com/62557235/191621662-f216e64a-ea18-46ef-a29a-9cad05d65d5c.png)
+***
