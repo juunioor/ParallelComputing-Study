@@ -1,7 +1,5 @@
 ***
-Programa desenvolvido com o auxílio dos materiais de aula.  
-Compilado no GDB online Debugger.  
-Necessita de entrada de argumento na linha de comando.  
+Programa desenvolvido com o auxílio dos materiais de aula. Compilado no GDB online Debugger. Necessita de entrada de argumento na linha de comando.    
   
 
 > #### TESTE COM N = 10^5 E 1 THREAD  
