@@ -1,6 +1,15 @@
 ***
-Programa desenvolvido com o auxílio dos materiais de aula. Compilado no GDB online Debugger. Necessita de entrada de argumento na linha de comando.    
+    OBSERVAÇÕES:
+    Programa desenvolvido com o auxílio dos materiais de aula.  
+    Compilado no GDB online Debugger.  
+    Necessita de entrada de argumento na linha de comando referente à quantidades de threads.  
+
+> #### Exemplo de entrada de argumento na linha de comando referente à quantidade de threads.  
+  
+![image](https://user-images.githubusercontent.com/62557235/191623057-30c4df8f-2856-419c-a39f-1c01ce69a89f.png)  
+
 ***
+    TESTES DA FUNCIONALIDADE DO PROGRAMA
 
 > #### TESTE COM N = 10^5 E 1 THREAD  
     
