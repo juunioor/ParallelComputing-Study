@@ -1,4 +1,6 @@
-ProJ V1 - Serial 
+ProJ V1 - Serial  
+
+- Código executado e commitado no github pela a AWS
   
 Criação do código na máquina virtual da AWS com o vim    
 ![image](https://user-images.githubusercontent.com/73514316/195466570-8efb5335-d25c-4a3e-9526-74504dcff5f1.png)
