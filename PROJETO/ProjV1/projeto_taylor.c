@@ -1,27 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int fatorial(int n){
+    int i;
     if (n == 0){
         return 1;
     }
-    else{
-        int i;
-        int res = 1;
-        for (i = 1; i <= n; i++){
+    int res = 1;
+    for (i = 1; i <= n; i++){
             res *= i;
         }
-        return res;
-    }
+    return res;
 }
 
-int main()
+int main(int  argc, char *argv[])
 {
-    int n, i;
+    int i;
+    int iteracoes = atoi(argv[1]);
     double res = 0;
 
-    for (i = 0; i < 34; i++){
+    for (i = 0; i < iteracoes; i++){
         res += 1/(float)fatorial(i);
     }
-    printf("%lf \n", res);
+    
+    printf("Resultado: %lf\n", res);
     return 0;
 }
