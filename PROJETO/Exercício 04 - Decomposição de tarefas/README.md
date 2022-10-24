@@ -9,7 +9,7 @@ LEGENDA:
 - ROSA -> THREAD RESULTADO
 - ROXO -> FATORIAL
 
-RES -> CALCULO RES -> FOR THREAD JOIN -> P_THREAD_JOIN -> PRINT RES E QTD ITERAÇÕES -> FREE THREADH_HANDLES
+![paralela2](https://user-images.githubusercontent.com/62557235/197437873-eabf5679-e19c-48b2-940e-68ac15a2944c.png)
 
 #### 2 - Qual é o limite inferior do tempo de execução paralela para cada decomposição?
 R: O limite inferior de execução paralela para esse DAG é de 2, visto que para termos o mínimo de paralelismo precisamos de 2 tarefas concorrentes.
