@@ -42,7 +42,7 @@ int main(int  argc, char *argv[])
     }
     
     
-    printf("Resultado com %d iteracoes: %lf\n", iteracoes, res);
+    printf("Resultado com %d iteracoes: %0.20lf\n", iteracoes, res);
     return 0;
     
     free(thread_handles); // libera as threads
