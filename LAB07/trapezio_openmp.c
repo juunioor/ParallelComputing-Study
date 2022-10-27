@@ -31,9 +31,10 @@ int main(int argc, char* argv[])
         printf("Com n = %d trapezios, nossa estimativa\n", n);
         printf("Da integral de %f para %f = %.14e\n", a , b, global_result);
 
-	printf("THREAD %d executou de um total de %d THREADS\n",my_rank, thread_count);
+	printf("THREAD %d executou de um total de %d THREADS\n\n",my_rank, thread_count);
     }
     
+    printf("\nResultado final = %.14lf", global_result);
 }
 
 void Trap(double a, double b, int n, double* global_result_p){
