@@ -44,7 +44,8 @@ void threadResultado(double *res){
     double res_aux;
     
     long id_thread = omp_get_thread_num();
-  
+    int qtd_thread = omp_get_num_threads();
+    
     long long i;
     
     // As threads vão intercalar o cálculo baseado em seu rank(id)
