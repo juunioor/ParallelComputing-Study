@@ -20,7 +20,7 @@ int main(int  argc, char *argv[])
     
     int iteracoes = atoi(argv[1]);
     
-    //int numero_threads = 2;
+    omp_set_num_threads(2);
   
     // ZONA PARALELA ABAIXO
     #pragma omp_parallel num_threads(2)  //diretiva de compilação do openmp com a qtd de threads
