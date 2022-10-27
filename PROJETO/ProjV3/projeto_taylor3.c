@@ -30,8 +30,10 @@ int main(int  argc, char *argv[])
     // ZONA PARALELA ABAIXO
     #pragma omp_parallel  //diretiva de compilação do openmp
     {   
-        printf("\nISSO TEM Q IMPRIMIR 2 VEZES, QTD DE THREADS");
-        threadResultado(&res);       
+        long id_thread = omp_get_thread_num();
+        int qtd_thread = omp_get_num_threads();
+        printf("\nTHREAD DE NÚMERO %ld DE UM TOTAL DE %d THREADS", id_thread, qtd_thread);
+        //threadResultado(&res);       
     }
     
     // SAIU DA ZONA PARALELA
