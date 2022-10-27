@@ -29,7 +29,6 @@ int main(int  argc, char *argv[])
     #pragma omp_parallel num_threds(qtd_thread) //diretiva de compilação do openmp com o parametro da qtd de threads
     {
         threadResultado(&res);
-        printf("EXECUTANDO THREAD DNV\n ");
     }
     
     // SAIU DA ZONA PARALELA
