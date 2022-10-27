@@ -36,6 +36,10 @@ em uma variável global do resultado "res". A lógica de cálculo pelo laço for
 Portanto, houve um ganho de **4m32.169** da versão serial para versão paralela
 
 
-## MUDANÇA NO LAÇO FOR DA FUNÇÃO PRINCIPAL (projeto_taylor_V2.c)
-- De forma à fazer as threads executarem juntas até ao final, ao invés de dividir elas em partes sequenciais iguais, intercalamos elas. 
+## MUDANÇA NO LAÇO FOR DA FUNÇÃO PRINCIPAL (projeto_taylor2_V2.c)
+- De forma à fazer as threads executarem juntas até ao final, ao invés de dividir elas em partes sequenciais iguais, intercalamos elas.
+![image](https://user-images.githubusercontent.com/73514316/198341557-bd812968-e632-4fb1-b52a-0b7281b28822.png)  
+**_Segue abaixo um dos testes de ganho de tempo:_**
+![image](https://user-images.githubusercontent.com/73514316/198341836-80730516-889c-4403-af00-42c3091dbc19.png)
+
 
