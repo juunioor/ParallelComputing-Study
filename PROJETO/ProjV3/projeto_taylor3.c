@@ -47,7 +47,7 @@ void threadResultado(double *res){
     // As threads vão intercalar o cálculo baseado em seu rank(id)
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
         res_aux += 1/(float)fatorial(i);
-        printf("\nA thread %ld está fazendo o fatorial de %lld !", id_thread, i);
+        printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
     }
     
     #pragma omp critical // ALTERAÇÃO DO VALOR DE RES NA ZONA CRÍTICA PARA N CAUSAR RESULTADOS IMPREVISÍVEIS
