@@ -24,8 +24,14 @@ int main(int argc, char* argv[])
     {
         Trap(a,b,n, &global_result);
         
+	int my_rank = omp_get_thread_num();
+	
+        int thread_count = omp_get_num_threads();
+
         printf("Com n = %d trapezios, nossa estimativa\n", n);
-        printf("Da intergral de %f para %f = %.14e\n", a , b, global_result);
+        printf("Da integral de %f para %f = %.14e\n", a , b, global_result);
+
+	printf("\nTHREAD %d de um total de %d THREAD",my_rank, thread_count);
     }
     
 }
