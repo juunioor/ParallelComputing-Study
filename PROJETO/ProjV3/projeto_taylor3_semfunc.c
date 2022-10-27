@@ -19,11 +19,12 @@ int main(int  argc, char *argv[])
     double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
+    int thread_count;
     
-    omp_set_num_threads(2);
+    thread_count = strtol(argv[2], NULL, 10); 
   
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(2)  //diretiva de compilação do openmp com a qtd de threads
+    #pragma omp_parallel num_threads(thread_count)  //diretiva de compilação do openmp com a qtd de threads
     {   
         double res_aux;
     
