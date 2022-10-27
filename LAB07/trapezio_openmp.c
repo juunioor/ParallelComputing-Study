@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 	printf("THREAD %d executou de um total de %d THREADS\n\n",my_rank, thread_count);
     }
     
-    printf("\nResultado final = %.14e\n", global_result);
+    printf("\nResultado final = %.14e\n\n\n", global_result);
 }
 
 void Trap(double a, double b, int n, double* global_result_p){
