@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <omp.h>
 
-void threadResultado(double *res); // Mudança no parâmetro 
+void threadResultado(int iteracoes, double *res); // Mudança no parâmetro 
 
 //#define qtd_thread 2
-int iteracoes;
+//int iteracoes;
 
 int fatorial(int n){
     int i;
@@ -23,13 +23,13 @@ int main(int  argc, char *argv[])
 {
     double res = 0.0; //inicializando res
     
-    iteracoes = atoi(argv[1]);
+    int iteracoes = atoi(argv[1]);
     
     //int numero_threads = 2;
     // ZONA PARALELA ABAIXO
     #pragma omp_parallel num_threads(2)  //diretiva de compilação do openmp com a qtd de threads
     {   
-        threadResultado(&res);       
+        threadResultado(iteracoes, &res);       
     }
     
     // SAIU DA ZONA PARALELA
@@ -38,7 +38,7 @@ int main(int  argc, char *argv[])
     
 }
 
-void threadResultado(double *res){
+void threadResultado(int iteracoes, double *res){
     double res_aux;
     
     int id_thread = omp_get_thread_num();
