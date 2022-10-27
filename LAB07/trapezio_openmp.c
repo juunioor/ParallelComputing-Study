@@ -56,7 +56,7 @@ void Trap(double a, double b, int n, double* global_result_p){
     
     my_result = my_result*h;
     
-    printf("Resultado do calculo thread %d é = %e\n", my_rank, my_result);
+    printf("Resultado do calculo thread %d é = %.14e\n", my_rank, my_result);
     #pragma omp critical
     {
         *global_result_p += my_result;
