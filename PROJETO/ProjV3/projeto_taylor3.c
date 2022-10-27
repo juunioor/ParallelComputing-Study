@@ -25,9 +25,9 @@ int main(int  argc, char *argv[])
     
     iteracoes = atoi(argv[1]);
     
-    int qtd_thread = 2;
+    int numero_threads = 2;
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(qtd_thread)  //diretiva de compilação do openmp com a qtd de threads
+    #pragma omp_parallel num_threads(numero_threads)  //diretiva de compilação do openmp com a qtd de threads
     {   
         threadResultado(&res);       
     }
@@ -42,6 +42,7 @@ void threadResultado(double *res){
     double res_aux;
     
     int id_thread = omp_get_thread_num();
+    int qtd_thread = omp_get_num_threads();
     
     long long i;
     
