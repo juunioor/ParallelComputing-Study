@@ -25,10 +25,10 @@ int main(int  argc, char *argv[])
     
     iteracoes = atoi(argv[1]);
     
-    int qtd_thread = 2;
+    //int qtd_thread = 2;
     
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(qtd_thread) //diretiva de compilação do openmp com o parametro da qtd de threads
+    #pragma omp_parallel num_threads(2) //diretiva de compilação do openmp com o parametro da qtd de threads
     {
         threadResultado(&res);
         printf("\nISSO TEM Q IMPRIMIR 2 VEZES");
