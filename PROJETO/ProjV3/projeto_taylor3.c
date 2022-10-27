@@ -4,7 +4,7 @@
 
 void threadResultado(double *res); // Mudança no parâmetro 
 
-#define qtd_thread 2
+//#define qtd_thread 2
 int iteracoes;
 
 int fatorial(int n){
@@ -25,6 +25,7 @@ int main(int  argc, char *argv[])
     
     iteracoes = atoi(argv[1]);
     
+    int qtd_thread = 2;
     // ZONA PARALELA ABAIXO
     #pragma omp_parallel num_threads(qtd_thread)  //diretiva de compilação do openmp com a qtd de threads
     {   
