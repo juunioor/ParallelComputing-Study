@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
         }
     }
     
-    printf("\nResultado final = %.14e\n", global_result);
+    printf("\nResultado final = %.14e\n\n\n", global_result);
 }
 
 double Local_trap(double a, double b, int n){
