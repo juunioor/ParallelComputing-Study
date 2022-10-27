@@ -40,7 +40,7 @@ int main(int  argc, char *argv[])
 
         #pragma omp critical // ALTERAÇÃO DO VALOR DE RES NA ZONA CRÍTICA PARA N CAUSAR RESULTADOS IMPREVISÍVEIS
         {
-            *res += res_aux;
+            res += res_aux;
         }
     }
     
