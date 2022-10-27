@@ -34,6 +34,8 @@ int main(int  argc, char *argv[])
         int qtd_thread = omp_get_num_threads();
 
         long long i;
+        
+        printf("THREAD %d executou de um total de %d THREADS\n\n", id_thread, qtd_thread);
 
         // As threads vão intercalar o cálculo baseado em seu rank(id)
         for(i = id_thread; i < iteracoes; i = i+qtd_thread){
