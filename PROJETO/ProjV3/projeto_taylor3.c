@@ -31,6 +31,7 @@ int main(int  argc, char *argv[])
     #pragma omp_parallel num_threads(qtd_thread) //diretiva de compilação do openmp com o parametro da qtd de threads
     {
         threadResultado(&res);
+        printf("\nISSO TEM Q IMPRIMIR 2 VEZES");
     }
     
     // SAIU DA ZONA PARALELA
