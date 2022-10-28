@@ -9,6 +9,7 @@
     chamada direto em uma variável temporária na zona paralelizada da main e logo após, ainda na zona paralelizada  
     da main, entra na zona crítica para alterar a variável compartilhada do resultado (trapaezio_openmp2.c).
     > Compilação e atualização dos arquivos no github feito pela a instância com 2 CPU da AWS.
+    > Foi adicionada a função f(x) e o cabeçalho math.h.
 ***
 
 ## COMPILAÇÃO NA AWS
