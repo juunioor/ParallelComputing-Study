@@ -33,4 +33,4 @@
 ![image](https://user-images.githubusercontent.com/73514316/198718371-e0533241-9ffb-42fc-957a-d511a5b96d22.png)
 
 #### CONSIDERAÇÕES FINAIS
-Portanto, vimos que não houve diferenças relevantes quando falamos em performance, porém, se se tratando na parte de código em si, a segunda forma se torna mais intuitiva para o programador, fazendo com que o papel de "facilitador" da biblioteca OpenMp seja ressaltado.
+Portanto, vimos que não houve diferenças relevantes quando falamos em performance, porém, se tratando na parte de código em si, a segunda forma se torna mais intuitiva para o programador, fazendo com que o papel de "facilitador" da biblioteca OpenMp seja ressaltado.
