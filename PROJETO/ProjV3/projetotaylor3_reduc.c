@@ -38,7 +38,7 @@ int main(int  argc, char *argv[])
     
 }
 
-void threadResultado(double *res){
+void threadResultado(){
     double res_aux;
     
     int id_thread = omp_get_thread_num();
