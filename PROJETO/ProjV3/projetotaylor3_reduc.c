@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-Double threadResultado(); // Mudança no parâmetro 
+double threadResultado(); // Mudança no parâmetro 
 
 //#define qtd_thread 2
 int iteracoes;
@@ -38,7 +38,7 @@ int main(int  argc, char *argv[])
     
 }
 
-void threadResultado(){
+double threadResultado(){
     double res_aux;
     
     int id_thread = omp_get_thread_num();
