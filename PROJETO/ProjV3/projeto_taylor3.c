@@ -27,7 +27,7 @@ int main(int  argc, char *argv[])
     
     //int numero_threads = 2;
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(2)  //diretiva de compilação do openmp com a qtd de threads
+    #pragma omp parallel num_threads(2)  //diretiva de compilação do openmp com a qtd de threads
     {   
         threadResultado(iteracoes, &res);       
     }
