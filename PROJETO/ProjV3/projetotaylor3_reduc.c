@@ -50,6 +50,8 @@ double threadResultado(){
     int qtd_thread = omp_get_num_threads();
     printf("\n%d qtd_thread", qtd_thread);
     
+    printf("\n%d iteracoes", iteracoes);
+    
     long long i;
     
     // As threads vão intercalar o cálculo baseado em seu rank(id)
