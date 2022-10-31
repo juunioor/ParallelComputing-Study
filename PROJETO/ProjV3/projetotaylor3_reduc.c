@@ -23,7 +23,7 @@ int main(int  argc, char *argv[])
     int iteracoes = atoi(argv[1]);
     
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(2) reduction(+: res) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
+    #pragma omp parallel num_threads(2) reduction(+: res) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
     {   
         res += threadResultado(iteracoes);    
     }
