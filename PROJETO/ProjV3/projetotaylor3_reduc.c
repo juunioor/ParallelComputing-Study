@@ -2,10 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-double threadResultado(); // Mudança no parâmetro 
-
-//#define qtd_thread 2
-int iteracoes;
+double threadResultado(int iteracoes); // Mudança no parâmetro 
 
 int fatorial(int n){
     int i;
@@ -26,13 +23,9 @@ int main(int  argc, char *argv[])
     int iteracoes = atoi(argv[1]);
     
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(2) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
+    #pragma omp_parallel num_threads(2) reduction(+: res) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
     {   
-        double res_temp = 0.0;
-        res_temp += threadResultado();    
-        
-        #pragma omp critical
-        res += res_temp;
+        res += threadResultado(iteracoes);    
     }
     
     // SAIU DA ZONA PARALELA
@@ -41,7 +34,7 @@ int main(int  argc, char *argv[])
     
 }
 
-double threadResultado(){
+double threadResultado(int iteracoes){
     printf("\nentrou na função");
     double res_aux;
     
