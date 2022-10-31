@@ -42,6 +42,7 @@ int main(int  argc, char *argv[])
 }
 
 double threadResultado(){
+    printf("\nentrou na função");
     double res_aux;
     
     int id_thread = omp_get_thread_num();
