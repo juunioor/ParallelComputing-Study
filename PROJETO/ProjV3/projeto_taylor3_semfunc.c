@@ -26,7 +26,7 @@ int main(int  argc, char *argv[])
     printf("TRABAHANDO COM %d THREADS!\n", thread_count);
   
     // ZONA PARALELA ABAIXO
-    #pragma omp_parallel num_threads(thread_count)  //diretiva de compilação do openmp com a qtd de threads
+    #pragma omp parallel num_threads(thread_count)  //diretiva de compilação do openmp com a qtd de threads
     {   
         double res_aux;
     
