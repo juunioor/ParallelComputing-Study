@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
         int thread_count = omp_get_num_threads();
 
         printf("Com n = %d trapezios, nossa estimativa\n", n);
-        printf("Da integral de %f para %f = %.14e\n", a , b, my_result);
+        printf("Da integral de %f para %f = %.14e\n", a , b, global_result);
 
         printf("THREAD %d executou de um total de %d THREADS\n\n",my_rank, thread_count);
     }
