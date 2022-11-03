@@ -25,13 +25,13 @@ int main(int argc, char* argv[])
         double my_result = 0.0;
         my_result += Local_trap(a, b, n);
         
-	      int my_rank = omp_get_thread_num();
+      	int my_rank = omp_get_thread_num();
         int thread_count = omp_get_num_threads();
 
         printf("Com n = %d trapezios, nossa estimativa\n", n);
         printf("Da integral de %f para %f = %.14e\n", a , b, my_result);
 
-	  printf("THREAD %d executou de um total de %d THREADS\n\n",my_rank, thread_count);
+  	printf("THREAD %d executou de um total de %d THREADS\n\n",my_rank, thread_count);
       
         #pragma omp critical
         { 
