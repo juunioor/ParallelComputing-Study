@@ -3,12 +3,12 @@
 #include <pthread.h>
 
 int qtd_thread; // variável global para todas as threads 
-#define m 4 // linhas  obs: não foi usado i ou j para não dar conflito nos iteradores dos loops
-#define n 4 // colunas 
+#define m 6 // linhas  obs: não foi usado i ou j para não dar conflito nos iteradores dos loops
+#define n 6 // colunas 
 
-double A[m][n] = {{1,7,5,8},{1,9,2,3},{1,6,5,4},{2,3,9,2}}; // matriz  
-double x[m] = {5,6,3,1};         // vetor 
-double y[m] = {0.0,0.0,0.0,0.0}; // resultado
+double A[m][n] = {{1,7,5,8,2,2},{1,9,2,3,2,2},{1,6,5,4,2,2},{2,3,9,2,2,2},{1,6,5,4,2,2},{2,3,9,2,2,2}}; // matriz  
+double x[m] = {5,6,3,1,2,2};         // vetor 
+double y[m] = {0.0,0.0,0.0,0.0,0.0,0.0}; // resultado
 
 void *Pth_mat_vect(void *rank); /* Função da thread */
 
