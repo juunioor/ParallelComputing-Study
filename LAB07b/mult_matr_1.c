@@ -49,8 +49,8 @@ int main(int argc, char* argv[]) {
             result_temp = 0.0; // a cada linha reseta a variável
             for (j =0; j < colunas; j++){
                 double a  = A[i][j];
-                double x = x[j];
-                result_temp += a*x;               
+                double x_2 = x[j];
+                result_temp += a*x_2;               
             }
             printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
             #pragma omp critical
