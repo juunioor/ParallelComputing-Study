@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
     double global_result = 0.0;
     //double a,b;
     double a = 0;
-    double b = 1
+    double b = 1;
     int n = strtol(argv[2], NULL, 10);    
     int thread_count;
     
