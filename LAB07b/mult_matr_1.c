@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     int colunas = 100;
     
     double A[100][100];
-    double x[100][100];
+    double x[100];
     double y[100];
     
     double numero_p_A = 1.123;
@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
         for (i = my_first_row; i <= my_last_row; i++){
             result_temp = 0.0; // a cada linha reseta a variável
             for (j =0; j < colunas; j++){
-                result_temp += A[i][j]*x[i][j];               
+                result_temp += A[i][j]*x[j];               
             }
             printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
             #pragma omp critical
