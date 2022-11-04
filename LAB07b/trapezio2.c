@@ -12,13 +12,15 @@ double f(double x){
 int main(int argc, char* argv[])
 {
     double global_result = 0.0;
-    double a,b;
-    int n;
+    //double a,b;
+    double a = 0;
+    double b = 1
+    int n = strtol(argv[2], NULL, 10);    
     int thread_count;
     
     thread_count = strtol(argv[1], NULL, 10);
-    printf("Entre com o valor a, b e n\n");
-    scanf("%lf %lf %d", &a, &b, &n);
+    //printf("Entre com o valor a, b e n\n");
+    //scanf("%lf %lf %d", &a, &b, &n);
     
     #pragma omp parallel num_threads(thread_count) reduction(+: global_result) // reduction fazendo o controle região crítica
     {
