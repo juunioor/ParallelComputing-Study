@@ -26,9 +26,13 @@ int main(int argc, char* argv[]) {
         for (i = my_first_row; i <= my_last_row; i++){
             for (j =0; j < colunas; j++){
                 result_temp += A[i][j]*x[j];
+                
             }
-            #pragma omp critical
-            y[i] = result_temp;
+            printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
+            #pragma omp critical{
+                y[i] = result_temp;
+            }
+            
         }  
         
         printf("Thread %d fazendo sua operação!\n", id_thread);
