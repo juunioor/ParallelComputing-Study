@@ -29,7 +29,8 @@ int main(int argc, char* argv[]) {
                 
             }
             printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
-            #pragma omp critical{
+            #pragma omp critical
+            {
                 y[i] = result_temp;
             }
             
