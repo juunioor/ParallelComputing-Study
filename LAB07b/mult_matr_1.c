@@ -14,15 +14,15 @@ int main(int argc, char* argv[]) {
     double numero_p_x = 1.321;
     
     // POPULANDO MATRIZ A
-    for(int i = 0; i < linhas; i++){
-        for(int j = 0; j < colunas; j++){
+    for(double i = 0; i < linhas; i++){
+        for(double j = 0; j < colunas; j++){
             A[i][j] = (i + j) * numero_p_A;
         }    
     }
     
     // POPULANDO MATRIZ x
-    for(int i = 0; i < linhas; i++){
-        for(int j = 0; j < colunas; j++){
+    for(double i = 0; i < linhas; i++){
+        for(double j = 0; j < colunas; j++){
             x[i][j] = (i + j) * numero_p_x;
         }    
     }
