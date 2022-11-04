@@ -24,9 +24,9 @@ int main(int argc, char* argv[]) {
         printf("\n Para a thread de id %d, temos a primeira linha = %d e a úlitima linha = %d \n", id_thread, my_first_row, my_last_row);
         
         for (i = my_first_row; i <= my_last_row; i++){
+            result_temp = 0.0; // a cada linha reseta a variável
             for (j =0; j < colunas; j++){
-                result_temp += A[i][j]*x[j];
-                
+                result_temp += A[i][j]*x[j];                
             }
             printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
             #pragma omp critical
