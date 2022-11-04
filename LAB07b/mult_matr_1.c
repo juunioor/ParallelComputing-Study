@@ -3,12 +3,12 @@
 #include <omp.h>
 
 int main(int argc, char* argv[]) {
-    int linhas = 1000;
-    int colunas = 1000;
+    int linhas = 100;
+    int colunas = 100;
     
-    double A[1000][1000];
-    double x[1000][1000];
-    double y[1000];
+    double A[100][100];
+    double x[100][100];
+    double y[100];
     
     double numero_p_A = 1.123;
     double numero_p_x = 1.321;
