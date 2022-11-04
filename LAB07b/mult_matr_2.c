@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     
     int qtd_thread = strtol(argv[1], NULL, 10); // variável de quantidade de threads
     
-    #pragma omp parallel num_threads(qtd_thread) for reduction(+: y[:linhas]) //pode ser m ou n no tamanho por ser matriz nXn
+    #pragma omp parallel num_threads(qtd_thread) reduction(+: y[:linhas]) //pode ser m ou n no tamanho por ser matriz nXn
     {
         int id_thread = omp_get_thread_num();
         int qtd_thread = omp_get_num_threads();
