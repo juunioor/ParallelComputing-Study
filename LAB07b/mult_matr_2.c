@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     
     int qtd_thread = strtol(argv[1], NULL, 10); // variável de quantidade de threads
     
-    #pragma omp parallel num_threads(qtd_thread) reduction(+: y[:linhas]) //pode ser m ou n no tamanho por ser matriz nXn
+    #pragma omp parallel num_threads(qtd_thread) for reduction(+: y[:linhas]) //pode ser m ou n no tamanho por ser matriz nXn
     {
         int id_thread = omp_get_thread_num();
         int qtd_thread = omp_get_num_threads();
@@ -20,6 +20,7 @@ int main(int argc, char* argv[]) {
         int local_linhas = linhas/qtd_thread; // números de linhas / quantidades de threads
         int my_first_row = id_thread*local_linhas; // o número da thread * local_linhas 
         int my_last_row = (id_thread + 1) * local_linhas - 1;
+        printf("\n Para a thread de id %d, temos a primeira linha = %d e a úlitima linha = %d \n", id_thread, my_first_row, my_last_row);
         
         for (i = my_first_row; i <= my_last_row; i++){
             //y[i] = 0.0;
