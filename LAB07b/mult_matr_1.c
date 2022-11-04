@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     // POPULANDO MATRIZ x
     for(int i = 0; i < linhas; i++){
         for(int j = 0; j < colunas; j++){
-            x[i][j] = (i+j)*numero_p_x;
+            x[j] = (i+j)*numero_p_x;
         }    
     } 
     
@@ -61,11 +61,14 @@ int main(int argc, char* argv[]) {
         printf("Thread %d fazendo sua operação!\n", id_thread);
     }
     
-    // Exibindo o vetor do resultado
+    /* Exibindo o vetor do resultado
     int i;
     printf("VETOR RESULTADO FINAL\n");
     for(i = 0; i < linhas; i++){
         printf("y[%d] = %f\t", i, y[i]);
-    }
+    } */
+    
+    // Exibindo o ultimo valor
+    printf("\nUltima posição do vetor resultado y[100] = %f", y[99]);
     
 }
