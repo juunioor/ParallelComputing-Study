@@ -11,6 +11,7 @@ double f(double x){
 
 int main(int argc, char* argv[])
 {
+    printf("VERSÃO COM CONTROLE DA ZONA CRÍTICA COM VARIÁVEL PRIVADA E SEÇÃO CRÍTICA APÓS CHAMADA DA FUNÇÃO\n\n");
     double global_result = 0.0;
     //double a,b;
     double a = 0;
