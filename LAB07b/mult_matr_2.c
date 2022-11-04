@@ -3,12 +3,12 @@
 #include <omp.h>
 
 int main(int argc, char* argv[]) {
-    int linhas = 4;
-    int colunas = 4;
+    int linhas = 6;
+    int colunas = 6;
     
-    double A[4][4] = {{1,7,5,8},{1,9,2,3},{1,6,5,4},{2,3,9,2}}; // matriz  
-    double x[4] = {5,6,3,1};         // vetor 
-    double y[4] = {0.0,0.0,0.0,0.0}; // resultado
+    double A[6][6] = {{1,7,5,8,2,2},{1,9,2,3,2,2},{1,6,5,4,2,2},{2,3,9,2,2,2},{1,6,5,4,2,2},{2,3,9,2,2,2}}; // matriz  
+    double x[6] = {5,6,3,1,2,2};         // vetor 
+    double y[6] = {0.0,0.0,0.0,0.0,0.0,0.0}; // resultado
     
     int qtd_thread = strtol(argv[1], NULL, 10); // variável de quantidade de threads
     
