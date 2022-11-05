@@ -3,15 +3,15 @@
 #include <omp.h>
 
 int main(int argc, char* argv[]) { 
-    int linhas = 1000;
-    int colunas = 1000;
+    int linhas = 10000;
+    int colunas = 10000;
     
-    double A[1000][1000];
-    double x[1000];
-    double y[1000];
+    long double A[10000][10000];
+    long double x[10000];
+    long double y[10000];
     
-    double numero_p_A = 1.123;
-    double numero_p_x = 1.321;
+    long double numero_p_A = 1.123;
+    long double numero_p_x = 1.321;
     
     // POPULANDO MATRIZ A
     for(int i = 0; i < linhas; i++){
@@ -62,5 +62,5 @@ int main(int argc, char* argv[]) {
     } */
     
     // Exibindo o ultimo valor
-    printf("\nUltima posição do vetor resultado y[1000] = %f", y[999]);
+    printf("\nUltima posição do vetor resultado y[1000] = %lf", y[999]);
 }
