@@ -69,6 +69,6 @@ int main(int argc, char* argv[]) {
     } */
     
     // Exibindo o ultimo valor
-    printf("\nUltima posição do vetor resultado y[100] = %f", y[999]);
+    printf("\nUltima posição do vetor resultado y[1000] = %f", y[999]);
     
 }
