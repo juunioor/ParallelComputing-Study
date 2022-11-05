@@ -6,12 +6,12 @@ int main(int argc, char* argv[]) {
     int linhas = 1000;
     int colunas = 1000;
     
-    double A[1000][1000];
-    double x[1000];
-    double y[1000];
+    long double A[1000][1000];
+    long double x[1000];
+    long double y[1000];
     
-    double numero_p_A = 1.123;
-    double numero_p_x = 1.321;
+    long double numero_p_A = 1.123;
+    long double numero_p_x = 1.321;
     
     // POPULANDO MATRIZ A
     for(int i = 0; i < linhas; i++){
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     
     #pragma omp parallel num_threads(qtd_thread) //pode ser m ou n no tamanho por ser matriz nXn
     {
-        double result_temp = 0.0;
+        long double result_temp = 0.0;
         int id_thread = omp_get_thread_num();
         int qtd_thread = omp_get_num_threads();
         int i, j;
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
             for (j =0; j < colunas; j++){
                 result_temp += A[i][j]*x[j];               
             }
-            printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
+            //printf("RESULT TEMP NA ITERACAO %d = %f \n",i, result_temp);
             #pragma omp critical
             {
                 y[i] = result_temp;
@@ -69,6 +69,6 @@ int main(int argc, char* argv[]) {
     } */
     
     // Exibindo o ultimo valor
-    printf("\nUltima posição do vetor resultado y[1000] = %f", y[999]);
+    printf("\nUltima posição do vetor resultado y[1000] = %lf", y[999]);
     
 }
