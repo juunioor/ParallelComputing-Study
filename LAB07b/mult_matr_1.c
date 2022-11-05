@@ -10,20 +10,18 @@ int main(int argc, char* argv[]) {
     long double x[3000];
     long double y[3000];
     
-    long double numero_p_A = 1.123;
-    long double numero_p_x = 1.321;
     
     // POPULANDO MATRIZ A
     for(int i = 0; i < linhas; i++){
         for(int j = 0; j < colunas; j++){
-            A[i][j] = (i+j)*numero_p_A;
+            A[i][j] = (long double)(i+1)/(j+1);
         }    
     }
     
     // POPULANDO MATRIZ x
     for(int i = 0; i < linhas; i++){
         for(int j = 0; j < colunas; j++){
-            x[j] = (i+j)*numero_p_x;
+            x[j] = (long double)(i+1)/(j+1);
         }    
     } 
     
