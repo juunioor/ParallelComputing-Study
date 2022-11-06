@@ -7,10 +7,14 @@
 # OBSERVAÇÕES IMPORTANTES
 - As técnicas usadas para o controle de acesso à região crítica foram **COM VARIÁVEL PRIVADA E SEÇÃO CRÍTICA APÓS CHAMADA DA FUNÇÃO** e o **REDUCTION**. 
 - Não conseguimos criar uma instância (máquina) de 4xCPU e 8xCPU. Segue o erro abaixo:
+
 ![image](https://user-images.githubusercontent.com/73514316/200150506-574d419f-fbf0-4dac-997f-2062d9fec427.png)
 - No momento que esse README está sendo feito, os códigos já estão compilados e os executáveis estão presentes no github. Além disso, seria um trabalho desnecessário refazer a compilação de 4 códigos diferentes apenas para printar, visto que já demonstramos fazer isso no LAB07 (anterior).   
 - Foram feitas as 3 execuções para mensurar a performance, com exceção dos testes de resultado das técnicas para o controle de acesso à região crítica no algoritmo de multiplicação de matrizes.
- 
+
+*** 
+![barra](https://user-images.githubusercontent.com/62557235/200195006-4a4d8d98-4044-45e2-b88d-9ba5c6178aab.png)
+*** 
 # SOMA DOS TRAPÉZIOS
 ## OBSERVAÇÕES GERAIS DOS DOIS CÓDIGOS
 - As variáveis para a e b foram adicionadas dentro do código para não precisarem ser feitas pela entrada do usuário, assim, evitando oscilação de performance pelo input:  
@@ -18,10 +22,11 @@
 - O número de threads e iterações "n" são feitas pelo terminal (argv):  
 ![image](https://user-images.githubusercontent.com/73514316/200150725-e22718e9-a4a0-4d40-b3d9-854eb23e87fb.png)
 
-
+   
 ### PRIMEIRA VERSÃO: VARIÁVEL PRIVADA E SEÇÃO CRÍTICA APÓS CHAMADA DA FUNÇÃO
 #### Parte do código do controle de acesso à região crítica
 ![image](https://user-images.githubusercontent.com/73514316/200150944-8f132a4c-42ff-465b-b24d-a3a6f7addca7.png)
+![barra](https://user-images.githubusercontent.com/62557235/200195033-b36ff084-1fc0-4e55-81f7-f09270110abd.png)
 ### EXECUÇÃO DO CÓDIGO COM **1 PROCESSADOR** E N = 100000000
 ![image](https://user-images.githubusercontent.com/73514316/200151164-9341f879-c4e4-4517-84c2-11cd5e256a6a.png)
 ![image](https://user-images.githubusercontent.com/73514316/200153007-46e5448c-6b70-44c5-96c9-767194b4abbd.png)
@@ -61,8 +66,9 @@
 ### MÉDIA DAS 3 EXECUÇÕES DE CADA VERSÃO
 *** 
 ![5](https://user-images.githubusercontent.com/62557235/200194615-fe126d54-cffa-476c-bf1c-4c574df79adc.png)
-*** 
-
+***  
+![barra](https://user-images.githubusercontent.com/62557235/200194988-0564dddc-c31b-4eee-b2e6-73c28f83a605.png)
+***                                     
 # MULTIPLICAÇÃO DE MATRIZES
 ## OBSERVAÇÕES GERAIS DOS DOIS CÓDIGOS
 - Para os testes relativos aos resultados, temos dois códigos que conseguimos controlar os resultados, com matriz e arrays de tamanho 6 (mult_matr_1_result.c e mult_matr_2_result.c).
@@ -83,6 +89,7 @@
 ### PRIMEIRA VERSÃO: VARIÁVEL PRIVADA E SEÇÃO CRÍTICA APÓS CHAMADA DA FUNÇÃO
 #### Parte do código do controle de acesso à região crítica
 ![image](https://user-images.githubusercontent.com/73514316/200151821-0e3059d2-7bd8-4455-9a6d-43a4f4b645d0.png)
+![barra](https://user-images.githubusercontent.com/62557235/200195044-fad9c016-d283-48de-bdfd-94b75fa5c89d.png)
 ### EXECUÇÃO DO CÓDIGO COM **1 PROCESSADOR** 
 ![image](https://user-images.githubusercontent.com/73514316/200152733-b568bffc-8c05-4ee1-b5df-63e149f4d30d.png)
 ![image](https://user-images.githubusercontent.com/73514316/200152745-3786c361-9d14-4e7c-87a2-15d9b58d2680.png)
@@ -100,6 +107,8 @@
 ### SEGUNDA VERSÃO: REDUCTION
 #### Parte do código do controle de acesso à região crítica
 ![image](https://user-images.githubusercontent.com/73514316/200151845-f22df944-28e2-4ac2-ab6e-5d9d2c9d4b00.png)
+![barra](https://user-images.githubusercontent.com/62557235/200195088-67668ca6-ff16-4c51-a06d-f66b3d94df86.png)
+
 ### EXECUÇÃO DO CÓDIGO COM **1 PROCESSADOR**
 ![image](https://user-images.githubusercontent.com/73514316/200152882-39a52688-b2d7-4628-802a-351cae6863a8.png)
 ![image](https://user-images.githubusercontent.com/73514316/200152899-210cd919-f456-4306-bcae-d059f8e66dba.png)
@@ -112,6 +121,7 @@
 ![image](https://user-images.githubusercontent.com/73514316/200152956-dfdbdc15-e214-46bb-b96c-97bf43499542.png)
 *** 
 ![9](https://user-images.githubusercontent.com/62557235/200194670-3ab36988-6cec-49b3-a453-a66fd47c0915.png)
+
 *** 
 ### MÉDIA DAS 3 EXECUÇÕES DE CADA VERSÃO
 *** 
