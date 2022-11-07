@@ -19,11 +19,9 @@ int main(int  argc, char *argv[])
     double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
-    int thread_count;
+    int thread_count = strtol(argv[2], NULL, 10);
     
-    thread_count = strtol(argv[2], NULL, 10); 
-    
-    printf("TRABAHANDO COM %d THREADS!\n", thread_count);
+    printf("TRABALHANDO COM %d THREADS!\n", thread_count);
   
     // ZONA PARALELA ABAIXO
     #pragma omp parallel num_threads(thread_count)  //diretiva de compilação do openmp com a qtd de threads
@@ -37,7 +35,7 @@ int main(int  argc, char *argv[])
         
         printf("THREAD %d executou de um total de %d THREADS\n\n", id_thread, qtd_thread);
 
-        // As threads vão intercalar o cálculo baseado em seu rank(id)
+        // As threads vão intercalar o cálculo baseado em seu id
         for(i = id_thread; i < iteracoes; i = i+qtd_thread){
             res_aux += 1/(float)fatorial(i);
             printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
