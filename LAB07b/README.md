@@ -11,6 +11,7 @@
 ![image](https://user-images.githubusercontent.com/73514316/200150506-574d419f-fbf0-4dac-997f-2062d9fec427.png)
 - No momento que esse README está sendo feito, os códigos já estão compilados e os executáveis estão presentes no github. Além disso, seria um trabalho desnecessário refazer a compilação de 4 códigos diferentes apenas para printar, visto que já demonstramos fazer isso no LAB07 (anterior).   
 - Foram feitas as 3 execuções para mensurar a performance, com exceção dos testes de resultado das técnicas para o controle de acesso à região crítica no algoritmo de multiplicação de matrizes.
+- Considerações sobre o valor total do somatório sobre cada uma das versões presente no último tópico.
 
 *** 
 ![barra](https://user-images.githubusercontent.com/62557235/200195006-4a4d8d98-4044-45e2-b88d-9ba5c6178aab.png)
@@ -127,3 +128,6 @@
 *** 
 ![10](https://user-images.githubusercontent.com/62557235/200194681-454d56ea-3a70-4239-b0e1-360d9115ee11.png)
 *** 
+
+# CONSIDERAÇÕES A CERCA DO RESULTADO DAS TÉCNICAS
+Analisando as imagens acima, podemos perceber que temos o mesmo resultado com a técnica de variável privada e seção crítica após a chamada e o reduction,mesmo mudando a quantidade de processadores/threads, o valor continua o mesmo, por exemplo, o código 1 do cálculo do trapézio com 1 processador deu o mesmo resultado do código 2 do trapézio com 2 processadores. Uma explicação plausível seria que, por trás dos panos, os dois são a mesma técnica. Por fim, vale ainda ressaltar que não há diferenças consideráveis de performance entre as duas versões.
