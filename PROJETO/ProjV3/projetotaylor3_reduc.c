@@ -36,15 +36,11 @@ int main(int  argc, char *argv[])
 }
 
 double threadResultado(int iteracoes){
-    printf("\nentrou na função");
     double res_aux;
     
     int id_thread = omp_get_thread_num();
-    printf("\n%d id da thread", id_thread);
     int qtd_thread = omp_get_num_threads();
-    printf("\n%d qtd_thread", qtd_thread);
     
-    printf("\n%d iteracoes", iteracoes);
     
     long long i;
     
