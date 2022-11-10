@@ -21,9 +21,10 @@ int main(int  argc, char *argv[])
     double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
+    int qtd_thread = atoi(argv[2]);
     
     // ZONA PARALELA ABAIXO
-    #pragma omp parallel num_threads(2) reduction(+: res) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
+    #pragma omp parallel num_threads(qtd_thread) reduction(+: res) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
     {   
         res += threadResultado(iteracoes);    
     }
@@ -47,7 +48,7 @@ double threadResultado(int iteracoes){
     
     long long i;
     
-    // As threads vão intercalar o cálculo baseado em seu rank(id)
+    // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
         res_aux += 1/(float)fatorial(i);
         printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
