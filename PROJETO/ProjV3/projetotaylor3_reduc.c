@@ -18,7 +18,7 @@ int fatorial(int n){
 
 int main(int  argc, char *argv[])
 {
-    double res = 0.0; //inicializando res
+    long double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
     int qtd_thread = atoi(argv[2]);
@@ -30,7 +30,7 @@ int main(int  argc, char *argv[])
     }
     
     // SAIU DA ZONA PARALELA
-    printf("\nResultado com %d iteracoes: %0.20lf\n", iteracoes, res);
+    printf("\nResultado com %d iteracoes: %0.20Lf\n", iteracoes, res);
 
     
 }
@@ -46,7 +46,7 @@ double threadResultado(int iteracoes){
     
     // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
-        res_aux += 1/(float)fatorial(i);
+        res_aux += 1/(long double)fatorial(i);
         //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
     }
     
