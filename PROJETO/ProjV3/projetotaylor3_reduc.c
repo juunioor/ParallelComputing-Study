@@ -51,7 +51,7 @@ double threadResultado(int iteracoes){
     // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
         res_aux += 1/(float)fatorial(i);
-        printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
+        //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
     }
     
     return res_aux;
