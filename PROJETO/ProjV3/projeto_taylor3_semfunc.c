@@ -16,7 +16,7 @@ int fatorial(int n){
 
 int main(int  argc, char *argv[])
 {
-    double res = 0.0; //inicializando res
+    long double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
     int thread_count = strtol(argv[2], NULL, 10);
@@ -26,7 +26,7 @@ int main(int  argc, char *argv[])
     // ZONA PARALELA ABAIXO
     #pragma omp parallel num_threads(thread_count)  //diretiva de compilação do openmp com a qtd de threads
     {   
-        double res_aux;
+        long double res_aux;
     
         int id_thread = omp_get_thread_num();
         int qtd_thread = omp_get_num_threads();
@@ -37,7 +37,7 @@ int main(int  argc, char *argv[])
 
         // As threads vão intercalar o cálculo baseado em seu id
         for(i = id_thread; i < iteracoes; i = i+qtd_thread){
-            res_aux += 1/(float)fatorial(i);
+            res_aux += 1/(long double)fatorial(i);
             //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
         }
 
