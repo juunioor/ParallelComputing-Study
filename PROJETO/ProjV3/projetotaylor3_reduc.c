@@ -45,7 +45,7 @@ double threadResultado(int iteracoes){
     
     // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
-        res_aux += 1/fatorial(i);
+        res_aux += 1.0/fatorial(i);
         if (i == 400){
             printf("\nFATORIAL DE 400 = %lf", fatorial(i));
         }    
