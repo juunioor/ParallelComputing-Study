@@ -30,7 +30,7 @@ int main(int  argc, char *argv[])
     }
     
     // SAIU DA ZONA PARALELA
-    printf("\nResultado com %d iteracoes: %0.20Lf\n", iteracoes, res);
+    printf("\nResultado com %d iteracoes: %0.20lf\n", iteracoes, res);
 
     
 }
@@ -48,7 +48,7 @@ double threadResultado(int iteracoes){
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
         res_aux += 1/fatorial(i);
         if (i == 200){
-            printf("\nFATORIAL DE 200 = %Lf", fatorial(i));
+            printf("\nFATORIAL DE 200 = %lf", fatorial(i));
         }    
             
         //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
