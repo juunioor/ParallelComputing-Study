@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-long double threadResultado(int iteracoes); // Mudança no parâmetro 
+double threadResultado(int iteracoes); // Mudança no parâmetro 
 
 long double fatorial(int n){
     if (n == 0){
@@ -34,7 +34,7 @@ int main(int  argc, char *argv[])
     
 }
 
-long double threadResultado(int iteracoes){
+double threadResultado(int iteracoes){
     long double res_aux;
     
     int id_thread = omp_get_thread_num();
