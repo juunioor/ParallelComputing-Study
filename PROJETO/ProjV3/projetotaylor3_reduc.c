@@ -36,7 +36,7 @@ int main(int  argc, char *argv[])
 }
 
 double threadResultado(int iteracoes){
-    long double res_aux;
+    double res_aux;
     
     int id_thread = omp_get_thread_num();
     int qtd_thread = omp_get_num_threads();
