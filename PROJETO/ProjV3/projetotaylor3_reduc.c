@@ -5,12 +5,11 @@
 double threadResultado(int iteracoes); // Mudança no parâmetro 
 
 double fatorial(int n){
-    int i;
     if (n == 0){
         return 1;
     }
     double res = 1;
-    for (i = 1; i <= n; i++){
+    for (double i = 1; i <= n; i++){
             res *= i;
         }
     return res;
@@ -42,7 +41,7 @@ double threadResultado(int iteracoes){
     int qtd_thread = omp_get_num_threads();
     
     
-    long long i;
+    double i;
     
     // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
