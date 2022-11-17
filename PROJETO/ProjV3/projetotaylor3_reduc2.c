@@ -36,7 +36,7 @@ int main(int  argc, char *argv[])
 }
 
 double threadResultado(int iteracoes){  
-    double res_aux;
+    long double res_aux;
     
     int id_thread = omp_get_thread_num();
     int qtd_thread = omp_get_num_threads();
@@ -48,7 +48,10 @@ double threadResultado(int iteracoes){
     long long i;
     
     for(i = my_first_i; i < my_last_i; i++){
-        res_aux += 1/(long double)fatorial(i);
+        long double res_fatorial = fatorial(i);
+        res_aux += 1/res_fatorial;
+        if i == 200:
+            print("\nFatorial de 200 = %Lf", res_fatorial);
         //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
       }  
     
