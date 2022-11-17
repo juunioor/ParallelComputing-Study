@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-long double threadResultado(long int iteracoes); // Mudança no parâmetro 
+long double threadResultado(int iteracoes); // Mudança no parâmetro 
 
 long double fatorial(int n){
     if (n == 0){
