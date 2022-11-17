@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <omp.h>
 
-double threadResultado(int iteracoes); // Mudança no parâmetro 
+long double threadResultado(long int iteracoes); // Mudança no parâmetro 
 
-double fatorial(int n){
+long double fatorial(int n){
     if (n == 0){
         return 1;
     }
-    double res = 1;
-    for (double i = 1; i <= n; i++){
+    long double res = 1;
+    for (long double i = 1; i <= n; i++){
             res *= i;
         }
     return res;
@@ -17,7 +17,7 @@ double fatorial(int n){
 
 int main(int  argc, char *argv[])
 {
-    double res = 0.0; //inicializando res
+    long double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
     int qtd_thread = atoi(argv[2]);
@@ -29,25 +29,25 @@ int main(int  argc, char *argv[])
     }
     
     // SAIU DA ZONA PARALELA
-    printf("\nResultado com %d iteracoes: %0.20lf\n", iteracoes, res);
+    printf("\nResultado com %d iteracoes: %0.20Lf\n", iteracoes, res);
 
     
 }
 
-double threadResultado(int iteracoes){
-    double res_aux;
+long double threadResultado(int iteracoes){
+    long double res_aux;
     
     int id_thread = omp_get_thread_num();
     int qtd_thread = omp_get_num_threads();
     
     
-    double i;
+    long int i;
     
     // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
         res_aux += 1/fatorial(i);
         if (i == 200){
-            printf("\nFATORIAL DE 200 = %lf", fatorial(i));
+            printf("\nFATORIAL DE 160 = %Lf", fatorial(i));
         }    
             
         //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
