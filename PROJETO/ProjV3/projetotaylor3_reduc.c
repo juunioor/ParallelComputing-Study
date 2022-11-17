@@ -46,10 +46,9 @@ double threadResultado(int iteracoes){
     
     // As threads vão intercalar o cálculo baseado em seu id
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
-        long double res_fatorial = fatorial(i);
-        res_aux += 1/res_fatorial;
+        res_aux += 1/(long double)fatorial(i);
         if (i == 200){
-            printf("\nFATORIAL DE 200 = %Lf", res_fatorial);
+            printf("\nFATORIAL DE 200 = %Lf", (long double)fatorial(i));
         }    
             
         //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
