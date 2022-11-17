@@ -4,12 +4,12 @@
 
 double threadResultado(int iteracoes); // Mudança no parâmetro 
 
-long double fatorial(int n){
+double fatorial(int n){
     if (n == 0){
         return 1;
     }
-    long double res = 1;
-    for (long double i = 1; i <= n; i++){
+    double res = 1;
+    for (double i = 1; i <= n; i++){
             res *= i;
         }
     return res;
@@ -17,7 +17,7 @@ long double fatorial(int n){
 
 int main(int  argc, char *argv[])
 {
-    long double res = 0.0; //inicializando res
+    double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
     int qtd_thread = atoi(argv[2]);
@@ -29,13 +29,13 @@ int main(int  argc, char *argv[])
     }
     
     // SAIU DA ZONA PARALELA
-    printf("\nResultado com %d iteracoes: %0.20Lf\n", iteracoes, res);
+    printf("\nResultado com %d iteracoes: %0.20lf\n", iteracoes, res);
 
     
 }
 
 double threadResultado(int iteracoes){
-    long double res_aux;
+    double res_aux;
     
     int id_thread = omp_get_thread_num();
     int qtd_thread = omp_get_num_threads();
@@ -47,7 +47,7 @@ double threadResultado(int iteracoes){
     for(i = id_thread; i < iteracoes; i = i+qtd_thread){
         res_aux += 1/fatorial(i);
         if (i == 400){
-            printf("\nFATORIAL DE 400 = %Lf", fatorial(i));
+            printf("\nFATORIAL DE 400 = %lf", fatorial(i));
         }    
             
         //printf("\nA thread %d está fazendo o fatorial de %lld !", id_thread, i);
