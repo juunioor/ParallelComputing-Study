@@ -18,7 +18,7 @@ double fatorial(int n){
 
 int main(int  argc, char *argv[])
 {
-    long double res = 0.0; //inicializando res
+    double res = 0.0; //inicializando res
     
     int iteracoes = atoi(argv[1]);
     int qtd_thread = atoi(argv[2]);
