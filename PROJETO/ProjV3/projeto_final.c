@@ -34,11 +34,11 @@ int main(int  argc, char *argv[])
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
           res += 1.0/fatorial(i);
-          if (i == 400){
-              printf("\nFATORIAL DE 400 = %Lf", fatorial(i));
+          if (i == 1000){
+              printf("\nFATORIAL DE 1000 = %Lf", fatorial(i));
           }    
       }
     }
     // SAIU DA ZONA PARALELA
-    printf("\nResultado com %d iteracoes: %0.20Lf\n", iteracoes, res);   
+    printf("\nResultado com %d iteracoes: %0.30Lf\n", iteracoes, res);   
 }
