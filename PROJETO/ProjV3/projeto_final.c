@@ -37,7 +37,7 @@ int main(int  argc, char *argv[])
           if (i == 400){
               printf("\nFATORIAL DE 400 = %Lf", fatorial(i));
           }    
-    }
+      }
     
     // SAIU DA ZONA PARALELA
     printf("\nResultado com %d iteracoes: %0.20Lf\n", iteracoes, res);   
