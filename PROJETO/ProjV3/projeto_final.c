@@ -25,11 +25,11 @@ int main(int  argc, char *argv[])
     #pragma omp parallel num_threads(qtd_thread) reduction(+: res) //diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
     {   
       
-      long double id_thread = omp_get_thread_num();
-      long double qtd_thread = omp_get_num_threads();
+      int id_thread = omp_get_thread_num();
+      int qtd_thread = omp_get_num_threads();
     
     
-      long double i;
+      long int i;
     
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
