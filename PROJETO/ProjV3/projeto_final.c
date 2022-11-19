@@ -36,14 +36,15 @@ int main(int  argc, char *argv[])
           long double res_teste = 1.0/fatorial(i);
           res += 1.0/fatorial(i);
           if(res_teste == 0.000000){
-              printf("O i em que o res vira 0 é %ld", i);
-              printf("res teste = %Lf", res_teste);
+              printf("\nO i em que o res vira 0 é %ld", i);
+              printf("\nres teste = %Lf", res_teste);
               break;
-          }    
+          }
+          /*
           if (i == 100){ // Limite do fatorial para long double 
               printf("\nFATORIAL DE 100 = %Lf", fatorial(i));
               printf("\nRESULTADO 1/FAT(1754) = %Lf", 1.0/fatorial(i));
-          }    
+          }    */
       }
     }
     // SAIU DA ZONA PARALELA
