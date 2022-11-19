@@ -35,7 +35,7 @@ int main(int  argc, char *argv[])
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
           res += 1.0/fatorial(i);
           if (i == 400){
-              printf("\nFATORIAL DE 400 = %lf", fatorial(i));
+              printf("\nFATORIAL DE 400 = %Lf", fatorial(i));
           }    
     }
     
