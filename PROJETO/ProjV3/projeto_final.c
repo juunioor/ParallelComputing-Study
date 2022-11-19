@@ -33,21 +33,10 @@ int main(int  argc, char *argv[])
     
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
-          long double res_teste = 1.0/fatorial(i);
-          res += 1.0/fatorial(i);
-          if(i == 1000){
-              printf("\nQUANDO I É 1000 TEMOS res_teste = %Lf, res = %Lf", res_teste, res);
+          res += 1.0/fatorial(i);   
+          if (res == 2.718281828459045235645008542491){ // Limite do fatorial para long double 
+              printf("\nA iteração em que res converge é %ld",i);
           }    
-          if(res_teste == 0.000000){
-              printf("\nO i em que o res vira 0 é %ld", i);
-              printf("\nres teste = %Lf", res_teste);
-              break;
-          }
-          /*
-          if (i == 100){ // Limite do fatorial para long double 
-              printf("\nFATORIAL DE 100 = %Lf", fatorial(i));
-              printf("\nRESULTADO 1/FAT(1754) = %Lf", 1.0/fatorial(i));
-          }    */
       }
     }
     // SAIU DA ZONA PARALELA
