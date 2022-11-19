@@ -36,7 +36,7 @@ int main(int  argc, char *argv[])
           res += 1.0/fatorial(i);
           if(res == 0.000000){
               printf("O i em que o res vira 0 é %ld", i);
-              printf("res = %ld", res);
+              printf("res = %Lf", res);
               break;
           if (i == 100){ // Limite do fatorial para long double 
               printf("\nFATORIAL DE 100 = %Lf", fatorial(i));
