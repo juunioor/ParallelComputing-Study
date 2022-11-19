@@ -33,10 +33,11 @@ int main(int  argc, char *argv[])
     
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
+          long double res_teste = 1.0/fatorial(i);
           res += 1.0/fatorial(i);
-          if(res == 0.000000){
+          if(res_teste == 0.000000){
               printf("O i em que o res vira 0 é %ld", i);
-              printf("res = %Lf", res);
+              printf("res teste = %Lf", res_teste);
               break;
           }    
           if (i == 100){ // Limite do fatorial para long double 
