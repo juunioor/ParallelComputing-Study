@@ -35,6 +35,9 @@ int main(int  argc, char *argv[])
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
           long double res_teste = 1.0/fatorial(i);
           res += 1.0/fatorial(i);
+          if(i == 1000){
+              printf("\nQUANDO I É 1000 TEMOS res_teste = %Lf, res = %Lf", res_teste, res);
+          }    
           if(res_teste == 0.000000){
               printf("\nO i em que o res vira 0 é %ld", i);
               printf("\nres teste = %Lf", res_teste);
