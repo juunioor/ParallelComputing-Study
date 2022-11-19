@@ -34,9 +34,9 @@ int main(int  argc, char *argv[])
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
           res += 1.0/fatorial(i);
-          if (i == 1754){ // Limite do fatorial para long double 
-              printf("\nFATORIAL DE 1754 = %Lf", fatorial(i));
-              printf("\nRESULTADO 1/FAT(1754) = %Lf", 1/fatorial(i));
+          if (i == 100){ // Limite do fatorial para long double 
+              printf("\nFATORIAL DE 100 = %Lf", fatorial(i));
+              printf("\nRESULTADO 1/FAT(1754) = %Lf", 1.0/fatorial(i));
           }    
       }
     }
