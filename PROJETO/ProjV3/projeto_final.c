@@ -34,8 +34,8 @@ int main(int  argc, char *argv[])
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
           res += 1.0/fatorial(i);
-          if (i == 1770){
-              printf("\nFATORIAL DE 1770 = %Lf", fatorial(i));
+          if (i == 1760){
+              printf("\nFATORIAL DE 1760 = %Lf", fatorial(i));
           }    
       }
     }
