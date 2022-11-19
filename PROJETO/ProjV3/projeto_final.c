@@ -36,7 +36,7 @@ int main(int  argc, char *argv[])
           res += 1.0/fatorial(i);
           if (i == 1754){ // Limite do fatorial para long double 
               printf("\nFATORIAL DE 1754 = %Lf", fatorial(i));
-              printf("\nRESULTADO 1/FAT(1754) = %Lf", 1.0000/fatorial(i));
+              printf("\nRESULTADO 1/FAT(1754) = %Lf", 1.000000/fatorial(i));
           }    
       }
     }
