@@ -39,5 +39,5 @@ int main(int  argc, char *argv[])
       }
     }
     // SAIU DA ZONA PARALELA
-    printf("\nResultado com %d iteracoes: %0.30Lf\n", iteracoes, res);   
+    printf("\nResultado com %d iteracoes: %Lf\n", iteracoes, res);   
 }
