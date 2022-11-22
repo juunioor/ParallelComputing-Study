@@ -36,9 +36,9 @@ int main(int  argc, char *argv[])
       int id_thread = omp_get_thread_num();
       int qtd_thread = omp_get_num_threads();
       
-      long int meu_n = iteracoes/qtd_thread;
-      long int primeiro_i = meu_n*id_thread;
-      long int ultimo_i = primeiro_i + meu_n;
+      int meu_n = iteracoes/qtd_thread;
+      int primeiro_i = meu_n*id_thread;
+      int ultimo_i = primeiro_i + meu_n;
       int i;
     
       // inicilizando onde o fatorial irá retornar
