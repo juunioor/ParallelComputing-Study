@@ -45,11 +45,6 @@ int main(int  argc, char *argv[])
       mpf_t res_fatorial;
       mpf_init2(res_fatorial,131072);
       
-      // Chamando o fatorial pra calcular o primeiro fatorial e o primeiro res da thread que está chamando.
-      fatorial(res_fatorial, primeiro_i); //armazena em res_fatorial
-      mpf_div(um_dividido_i, valor_um, res_fatorial); // calculando a divisão por um
-      mpf_add(res_temp, res_temp, um_dividido_i); //fazendo o resultado = resultado + um_dividido_i(1/fatorial(i))  
-      
       // inicializando a variavel que vai receber o resultado de 1/fatorial(i)
       mpf_t um_dividido_i;
       mpf_init2(um_dividido_i,131072);
@@ -59,6 +54,11 @@ int main(int  argc, char *argv[])
       mpf_t valor_um;
       mpf_init2(valor_um,131072);
       mpf_set_str(valor_um, "1.0", 10);
+        
+      // Chamando o fatorial pra calcular o primeiro fatorial e o primeiro res da thread que está chamando.
+      fatorial(res_fatorial, primeiro_i); //armazena em res_fatorial
+      mpf_div(um_dividido_i, valor_um, res_fatorial); // calculando a divisão por um
+      mpf_add(res_temp, res_temp, um_dividido_i); //fazendo o resultado = resultado + um_dividido_i(1/fatorial(i)) 
         
       // As threads vão dividir o calculo
       for(i = primeiro_i+1; i < ultimo_i; i++){
