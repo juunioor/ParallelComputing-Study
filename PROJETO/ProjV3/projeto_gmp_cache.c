@@ -46,7 +46,7 @@ int main(int  argc, char *argv[])
       mpf_init2(res_fatorial,131072);
       
       // Chamando o fatorial pra calcular o primeiro fatorial da thread.
-      fatorial(res_fatorial, primeiro_i) //armazena em res_fatorial
+      fatorial(res_fatorial, primeiro_i); //armazena em res_fatorial
       
       // inicializando a variavel que vai receber o resultado de 1/fatorial(i)
       mpf_t um_dividido_i;
