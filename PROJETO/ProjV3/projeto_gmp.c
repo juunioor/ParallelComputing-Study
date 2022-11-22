@@ -41,10 +41,15 @@ int main(int  argc, char *argv[])
       mpf_init2(um_dividido_i,1024);
       mpf_set_str(um_dividido_i, "0.0", 10);  
         
+      // inicializando uma variável pro valor 1
+      mpf_t valor_um;
+      mpf_init2(valor_um,1024);
+      mpf_set_str(valor_um, "1.0", 10);
+        
       // As threads vão intercalar o cálculo baseado em seu id
       for(i = id_thread; i < iteracoes; i = i+qtd_thread){
           fatorial(res_fatorial,i); //chamando a função gmp do fatorial para o i da iteração
-          mpf_div(um_dividido_i, 1.0, res_fatorial); // calculando a divisão por um
+          mpf_div(um_dividido_i, valor_um, res_fatorial); // calculando a divisão por um
           mpf_add(res, res, um_dividido_i); //~fazendo o resultado = resultado + um_dividido_i(1/fatorial(i))    
       }
     }
