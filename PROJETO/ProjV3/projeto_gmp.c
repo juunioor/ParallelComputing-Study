@@ -30,7 +30,7 @@ int main(int  argc, char *argv[])
     {    
       int id_thread = omp_get_thread_num();
       int qtd_thread = omp_get_num_threads();   
-      long int i;
+      int i;
     
       // inicilizando onde o fatorial irá retornar
       mpf_t res_fatorial;
