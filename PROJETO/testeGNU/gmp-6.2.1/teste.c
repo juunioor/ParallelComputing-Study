@@ -32,7 +32,6 @@ int main(){
 
 	mpf_t res;
 	mpf_init2(res,256);
-	mpf_set_str(res,"1",10);
 	fatorial(res,i);
 	//mpf_div(res, var, var2);
 	gmp_printf("%.20Ff",res);
