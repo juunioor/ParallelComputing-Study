@@ -45,8 +45,10 @@ int main(int  argc, char *argv[])
       mpf_t res_fatorial;
       mpf_init2(res_fatorial,131072);
       
-      // Chamando o fatorial pra calcular o primeiro fatorial da thread.
+      // Chamando o fatorial pra calcular o primeiro fatorial e o primeiro res da thread que está chamando.
       fatorial(res_fatorial, primeiro_i); //armazena em res_fatorial
+      mpf_div(um_dividido_i, valor_um, res_fatorial); // calculando a divisão por um
+      mpf_add(res_temp, res_temp, um_dividido_i); //fazendo o resultado = resultado + um_dividido_i(1/fatorial(i))  
       
       // inicializando a variavel que vai receber o resultado de 1/fatorial(i)
       mpf_t um_dividido_i;
@@ -59,10 +61,10 @@ int main(int  argc, char *argv[])
       mpf_set_str(valor_um, "1.0", 10);
         
       // As threads vão dividir o calculo
-      for(i = primeiro_i; i < ultimo_i; i++){
+      for(i = primeiro_i+1; i < ultimo_i; i++){
           mpf_mul_ui(res_fatorial, res_fatorial, i); // calcula o próximo fatorial com base nos anteriores
           mpf_div(um_dividido_i, valor_um, res_fatorial); // calculando a divisão por um
-          mpf_add(res_temp, res_temp, um_dividido_i); //~fazendo o resultado = resultado + um_dividido_i(1/fatorial(i))    
+          mpf_add(res_temp, res_temp, um_dividido_i); //fazendo o resultado = resultado + um_dividido_i(1/fatorial(i))    
       }
         
       #pragma omp critical
