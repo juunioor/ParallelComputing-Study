@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "gmp.h"
+
+int main(){
+	mpf_t var;
+	mpf_init(var);
+	mpf_set_d(var,1.2000);
+	gmp_printf("%d",var);
+dsf
+}
+
