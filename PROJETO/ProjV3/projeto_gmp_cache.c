@@ -60,7 +60,7 @@ int main(int  argc, char *argv[])
         
       // As threads vão dividir o calculo
       for(i = primeiro_i; i < ultimo_i; i++){
-          mpf_mul_ui(res_fatorial, res_fatorial, i)// calcula o próximo fatorial com base nos anteriores
+          mpf_mul_ui(res_fatorial, res_fatorial, i); // calcula o próximo fatorial com base nos anteriores
           mpf_div(um_dividido_i, valor_um, res_fatorial); // calculando a divisão por um
           mpf_add(res_temp, res_temp, um_dividido_i); //~fazendo o resultado = resultado + um_dividido_i(1/fatorial(i))    
       }
