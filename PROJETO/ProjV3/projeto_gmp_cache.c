@@ -19,7 +19,7 @@ int main(int  argc, char *argv[])
 {
     //inicializando res com omp
     mpf_t res;
-    mpf_init2(res,131072);
+    mpf_init2(res,2097152);
     mpf_set_str(res,"0.0",10);
     
     int iteracoes = atoi(argv[1]);
@@ -30,7 +30,7 @@ int main(int  argc, char *argv[])
     { 
       // variável intermediária para adicionar ao resultado principal depois na zona crítica
       mpf_t res_temp;
-      mpf_init2(res_temp, 524288);
+      mpf_init2(res_temp, 2097152);
       mpf_set_str(res_temp, "0.0", 10);
         
       int id_thread = omp_get_thread_num();
@@ -43,16 +43,16 @@ int main(int  argc, char *argv[])
     
       // inicilizando onde o fatorial irá retornar
       mpf_t res_fatorial;
-      mpf_init2(res_fatorial,524288);
+      mpf_init2(res_fatorial,2097152);
       
       // inicializando a variavel que vai receber o resultado de 1/fatorial(i)
       mpf_t um_dividido_i;
-      mpf_init2(um_dividido_i,524288);
+      mpf_init2(um_dividido_i,2097152);
       mpf_set_str(um_dividido_i, "0.0", 10);  
         
       // inicializando uma variável pro valor 1
       mpf_t valor_um;
-      mpf_init2(valor_um,524288);
+      mpf_init2(valor_um,2097152);
       mpf_set_str(valor_um, "1.0", 10);
         
       // Chamando o fatorial pra calcular o primeiro fatorial e o primeiro res da thread que está chamando.
@@ -74,5 +74,5 @@ int main(int  argc, char *argv[])
     }
     
     // SAIU DA ZONA PARALELA
-    gmp_printf("\nResultado com %d iteracoes: %0.100000Ff\n", iteracoes, res);
+    gmp_printf("\nResultado com %d iteracoes: %0.120000Ff\n", iteracoes, res);
 }
