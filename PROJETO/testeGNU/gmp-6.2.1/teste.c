@@ -28,7 +28,7 @@ int main(){
 	mpf_t var2;
 	mpf_init2(var2,256);
 	mpf_set_str(var2,"10.0",10);*/
-	int i = 1;
+	int i = 5;
 
 	mpf_t res;
 	mpf_init2(res,256);
