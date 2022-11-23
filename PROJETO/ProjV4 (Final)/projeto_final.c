@@ -87,7 +87,7 @@ int main(int  argc, char *argv[])
     //gmp_printf("\nResultado com %d iteracoes: %0.150000Ff\n", iteracoes, res);
     
     // Armazenando o resultado no arquivo txt
-    gmp_fprintf(arq, "%0.1000Ff", res);
+    gmp_fprintf(arq, "%0.200000Ff", res);
     
     // Desalocando resultado do resultado
     mpf_clear(res);
