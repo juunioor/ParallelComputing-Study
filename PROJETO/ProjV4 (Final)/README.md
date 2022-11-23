@@ -14,12 +14,25 @@ Arithmetic Library. Logo após, fizemos a instalação dela na máquina virtual,
 Após a instalação, fizemos testes para aprender a usar a biblioteca e compilar o código. Segue abaixo um print do teste feito da função fatorial (com objetivo de já implementar no código anterior da versão 3):  
 ![image](https://user-images.githubusercontent.com/73514316/203628950-f9218029-0ddf-4900-a47b-c1f7c511c5b2.png)  
 Para compilar um progrma em GMP, temos que usar as seguintes diretivas de compilação:  
-gcc nomedoarquivo.c -o nomedoexecutavel -lgmp -lgmpxx  
+_gcc nomedoarquivo.c -o nomedoexecutavel -lgmp -lgmpxx_ 
 
-## IMPLEMENTAÇÃO NO CÓDIGO  
+## IMPLEMENTAÇÃO NO CÓDIGO 
+Definição de variáveis:  
+![image](https://user-images.githubusercontent.com/73514316/203654442-75597c22-734c-4da6-a60e-fdd9c2223d83.png)  
+- Exemplo de definição de variáveis do tipo float "mpf_t res"  
+- Com "mpf_init2(res,4194304)" inicializamos a variável "res" definida antes e ainda atribuimos 4194304 bits de memória para ela.  
+- Por fim utilizamos "mpf_set_str(res,"0.0",10)" para atribuir o valor 0.0 para res com a base 10. Definido em string para aumentar a capacidade da variável. - Obs: Todas as variáveis gmp definidas e usadas seguem o mesmo padrão acima.
+
+Utilização de operações:
+![image](https://user-images.githubusercontent.com/73514316/203655326-880c81dd-7c55-4875-ad48-ea861ab91ef3.png)  
+- As operações em um geral 
 
 
 
+Função do Fatorial:  
+![image](https://user-images.githubusercontent.com/73514316/203653981-0d442dda-f25d-427c-858e-afc6622119b6.png)
+- A função no GMP é void e o retorno dela é feito no primeiro parâmetro passado à essa função, "mpf_t res_fatorial".  
+- 
 
 
 
