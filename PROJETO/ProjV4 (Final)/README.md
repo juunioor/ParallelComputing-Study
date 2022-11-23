@@ -14,12 +14,29 @@ Arithmetic Library. Logo após, fizemos a instalação dela na máquina virtual,
 Após a instalação, fizemos testes para aprender a usar a biblioteca e compilar o código. Segue abaixo um print do teste feito da função fatorial (com objetivo de já implementar no código anterior da versão 3):  
 ![image](https://user-images.githubusercontent.com/73514316/203628950-f9218029-0ddf-4900-a47b-c1f7c511c5b2.png)  
 Para compilar um progrma em GMP, temos que usar as seguintes diretivas de compilação:  
-gcc nomedoarquivo.c -o nomedoexecutavel -lgmp -lgmpxx  
+_gcc nomedoarquivo.c -o nomedoexecutavel -lgmp -lgmpxx_ 
 
-## IMPLEMENTAÇÃO NO CÓDIGO  
+## IMPLEMENTAÇÃO NO CÓDIGO 
+### Definição de variáveis:  
+![image](https://user-images.githubusercontent.com/73514316/203654442-75597c22-734c-4da6-a60e-fdd9c2223d83.png)  
+- Exemplo de definição de variáveis do tipo float "mpf_t res"  
+- Com "mpf_init2(res,4194304)" inicializamos a variável "res" definida antes e ainda atribuimos 4194304 bits de memória para ela.  
+- Por fim utilizamos "mpf_set_str(res,"0.0",10)" para atribuir o valor 0.0 para res com a base 10. Definido em string para aumentar a capacidade da variável. - Obs: Todas as variáveis gmp definidas e usadas seguem o mesmo padrão acima.
 
+### Utilização de operações:  
+![image](https://user-images.githubusercontent.com/73514316/203655326-880c81dd-7c55-4875-ad48-ea861ab91ef3.png)  
+![image](https://user-images.githubusercontent.com/73514316/203655924-71dcc325-e765-41b2-8dcc-e19bcde98ccb.png)  
+- As operações em um geral seguem um padrão, onde o resultado é o primeiro parâmetro e os outros 2 parâmetros são as variáveis que farão a operação especificada entre si.  
 
+### Função do Fatorial:  
+![image](https://user-images.githubusercontent.com/73514316/203653981-0d442dda-f25d-427c-858e-afc6622119b6.png)
+- A função no GMP é void e o retorno dela é feito no primeiro parâmetro passado à essa função, "mpf_t res_fatorial".  
+- Temos que ter um retorno implícito sem nada para retornar à main.  
 
+### Cache para cálculo mais rápido:  
+![image](https://user-images.githubusercontent.com/73514316/203656128-29e9ff7a-41a4-49ee-ae92-54afac790deb.png)  
+- Como visto acima, implementamos um cache para calcular mais rápido o resultado, visto que, agora com os cálculos estarem sendo feitos de fato devido ao aumento exorbitante do número de casas, o programa ficou bem mais pesado, por isso, para conseguirmos mais iterações e mais casas decimais, precisamos desse cache.  
+- 
 
 
 
