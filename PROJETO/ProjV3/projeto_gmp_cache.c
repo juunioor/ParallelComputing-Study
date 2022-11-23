@@ -17,7 +17,11 @@ void fatorial(mpf_t res_fatorial, int n){
 
 int main(int  argc, char *argv[])
 {
-    //inicializando res com omp
+    // usando o FILE para escrever no arquivo txt
+    FILE *arq;
+    file = fopen("resultado_euler.txt", "wt");
+    
+    //inicializando res com GMP
     mpf_t res;
     mpf_init2(res,2097152);
     mpf_set_str(res,"0.0",10);
@@ -25,7 +29,7 @@ int main(int  argc, char *argv[])
     int iteracoes = atoi(argv[1]);
     int qtd_thread = atoi(argv[2]);
     
-    // ZONA PARALELA ABAIXO
+    // ZONA PARALELA COM OMP ABAIXO
     #pragma omp parallel num_threads(qtd_thread)//diretiva de compilação do openmp com a qtd de threads e o reduction para a zona crítica
     { 
       // variável intermediária para adicionar ao resultado principal depois na zona crítica
@@ -73,6 +77,15 @@ int main(int  argc, char *argv[])
       }
     }
     
-    // SAIU DA ZONA PARALELA
-    gmp_printf("\nResultado com %d iteracoes: %0.150000Ff\n", iteracoes, res);
+    // SAIU DA ZONA PARALELA E PRINTA O RESULTADO
+    //gmp_printf("\nResultado com %d iteracoes: %0.150000Ff\n", iteracoes, res);
+    
+    // Desalocando as variáveis GMP (menos o Resultado)
+    mpz_clear(res_fatorial);
+    mpz_clear(res_temp);
+    mpz_clear(um_dividido_i);
+    mpz_clear(valor_um);
+    
+    // Armazenando o resultado no arquivo txt
+    gmp_fprintf(arq, "%Ff", res);
 }
