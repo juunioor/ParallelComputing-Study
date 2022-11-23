@@ -75,16 +75,16 @@ int main(int  argc, char *argv[])
       {
           mpf_add(res, res, res_temp);        
       }
+        
+      // Desalocando as variáveis GMP usadas na thread 
+      mpf_clear(res_fatorial);
+      mpf_clear(res_temp);
+      mpf_clear(um_dividido_i);
+      mpf_clear(valor_um);
     }
     
     // SAIU DA ZONA PARALELA E PRINTA O RESULTADO
     //gmp_printf("\nResultado com %d iteracoes: %0.150000Ff\n", iteracoes, res);
-    
-    // Desalocando as variáveis GMP (menos o Resultado)
-    mpf_clear(res_fatorial);
-    mpf_clear(res_temp);
-    mpf_clear(um_dividido_i);
-    mpf_clear(valor_um);
     
     // Armazenando o resultado no arquivo txt
     gmp_fprintf(arq, "%Ff", res);
