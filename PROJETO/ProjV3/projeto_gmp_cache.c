@@ -81,16 +81,16 @@ int main(int  argc, char *argv[])
     //gmp_printf("\nResultado com %d iteracoes: %0.150000Ff\n", iteracoes, res);
     
     // Desalocando as variáveis GMP (menos o Resultado)
-    mpz_clear(res_fatorial);
-    mpz_clear(res_temp);
-    mpz_clear(um_dividido_i);
-    mpz_clear(valor_um);
+    mpf_clear(res_fatorial);
+    mpf_clear(res_temp);
+    mpf_clear(um_dividido_i);
+    mpf_clear(valor_um);
     
     // Armazenando o resultado no arquivo txt
     gmp_fprintf(arq, "%Ff", res);
     
-    // Desalocando resultado
-    mpz_clear(res);
+    // Desalocando resultado do resultado
+    mpf_clear(res);
     
     // Fechando arquivo
     fclose(arq);
