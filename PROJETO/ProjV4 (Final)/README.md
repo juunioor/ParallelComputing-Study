@@ -10,7 +10,7 @@ Nos deparamos com uma biblioteca que possibilita aumentar a quantidade de casas 
 Arithmetic Library. Logo após, fizemos a instalação dela na máquina virtual, localizada em Projeto/testeGNU. Na figura abaixo podemos ver a instalação da Lib:   
 ![image](https://user-images.githubusercontent.com/73514316/203628203-72e05791-82a2-4e67-b86a-52a8013007a7.png)
 
-## TESTES
+## TESTES DA BIBLIOTECA GMP
 Após a instalação, fizemos testes para aprender a usar a biblioteca e compilar o código. Segue abaixo um print do teste feito da função fatorial (com objetivo de já implementar no código anterior da versão 3):  
 ![image](https://user-images.githubusercontent.com/73514316/203628950-f9218029-0ddf-4900-a47b-c1f7c511c5b2.png)  
 Para compilar um progrma em GMP, temos que usar as seguintes diretivas de compilação:  
@@ -36,7 +36,16 @@ _gcc nomedoarquivo.c -o nomedoexecutavel -lgmp -lgmpxx_
 ### Cache para cálculo mais rápido:  
 ![image](https://user-images.githubusercontent.com/73514316/203656128-29e9ff7a-41a4-49ee-ae92-54afac790deb.png)  
 - Como visto acima, implementamos um cache para calcular mais rápido o resultado, visto que, agora com os cálculos estarem sendo feitos de fato devido ao aumento exorbitante do número de casas, o programa ficou bem mais pesado, por isso, para conseguirmos mais iterações e mais casas decimais, precisamos desse cache.  
-- 
+- Antes de entrar no laço que calcula os subsequentes laços, calculamos o primeiro fatorial da thread baseado no seu primeiro i e colocamos no resultado do fatorial. Após isso, calculamos o fatorial localmente no laço, se baseando no primeiro fatorial e resultado calculado, ou seja, multiplicamos o resultado anterior pelo i (incremento) do for, assim não tendo necessidade de chamar a função do fatorial nesse laço.  
+
+### Colocando o resultado em um txt
+Tivemos que armazenar o resultado em um arquivo txt pois o print da AWS é limitado em mais ou menos 180 mil caracteres. Dito isso, criamos um txt no github com o resultado calculado que terá o resultado armazenado imediatante ao término do programa.  Segue abaixo o procedimento que usamos para gravar o resultado em "resultado_euler.txt":  
+![image](https://user-images.githubusercontent.com/73514316/203662727-1a4cb0c5-e2a4-4c20-b90c-812c1e404551.png)  
+![image](https://user-images.githubusercontent.com/73514316/203662747-94444b77-7f62-483d-90bf-7234fcddb23e.png)  
+![image](https://user-images.githubusercontent.com/73514316/203662763-fa592c2e-014a-4d19-9054-ab299db137bb.png)  
+
+
+
 
 
 
