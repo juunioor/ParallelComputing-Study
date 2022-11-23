@@ -1,4 +1,4 @@
-***
+se***
     > 32092921 | MATHEUS HENRIQUE DA SILVA APOSTULO
     > 32095971 | VALDIR LOPES JUNIOR
 *** 
@@ -26,5 +26,6 @@
 ![image](https://user-images.githubusercontent.com/73514316/200987572-ba9036a3-163f-414f-8b47-796eaaa76bce.png)
 ![image](https://user-images.githubusercontent.com/73514316/200987530-b7d233f9-e958-42ef-9fc6-d0be9b9256a4.png)
 
-Portanto, com OpenMP, de 1 processador para 2 processadores tivemos um speedup(ganho) de 7,448 segundos.
+Portanto, com OpenMP, de 1 processador para 2 processadores tivemos um ganho de 7,448 segundos.  
+**Speedup = 1,95**
 
