@@ -19,7 +19,7 @@ int main(int  argc, char *argv[])
 {
     // usando o FILE para escrever no arquivo txt
     FILE *arq;
-    file = fopen("resultado_euler.txt", "wt");
+    arq = fopen("resultado_euler.txt", "wt");
     
     //inicializando res com GMP
     mpf_t res;
@@ -88,4 +88,10 @@ int main(int  argc, char *argv[])
     
     // Armazenando o resultado no arquivo txt
     gmp_fprintf(arq, "%Ff", res);
+    
+    // Desalocando resultado
+    mpz_clear(res);
+    
+    // Fechando arquivo
+    fclose(arq);
 }
