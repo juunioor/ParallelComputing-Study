@@ -74,5 +74,5 @@ int main(int  argc, char *argv[])
     }
     
     // SAIU DA ZONA PARALELA
-    gmp_printf("\nResultado com %d iteracoes: %0.200000Ff\n", iteracoes, res);
+    gmp_printf("\nResultado com %d iteracoes: %0.150000Ff\n", iteracoes, res);
 }
