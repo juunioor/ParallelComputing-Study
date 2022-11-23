@@ -5,6 +5,7 @@ Como podemos ver nas imagens acima, a partir de 100 iterações, independentemen
 Dito isso, entraremos na última versão do nosso projeto (ProjV4(final)), no qual implementamos uma biblioteca para aumentar a capacidade das variáveis com o objetivo de conseguir mais casas.
 
 # PROJV4 (FINAL)
+Obs: O código citado é o "projeto_final.c"  
 ## INSTALAÇÃO DA BIBLIOTECA 
 Nos deparamos com uma biblioteca que possibilita aumentar a quantidade de casas decimais de quantidade muito extensa, o nome é GMP Multiple Precision
 Arithmetic Library. Logo após, fizemos a instalação dela na máquina virtual, localizada em Projeto/testeGNU. Na figura abaixo podemos ver a instalação da Lib:   
@@ -38,15 +39,29 @@ _gcc nomedoarquivo.c -o nomedoexecutavel -lgmp -lgmpxx_
 - Como visto acima, implementamos um cache para calcular mais rápido o resultado, visto que, agora com os cálculos estarem sendo feitos de fato devido ao aumento exorbitante do número de casas, o programa ficou bem mais pesado, por isso, para conseguirmos mais iterações e mais casas decimais, precisamos desse cache.  
 - Antes de entrar no laço que calcula os subsequentes laços, calculamos o primeiro fatorial da thread baseado no seu primeiro i e colocamos no resultado do fatorial. Após isso, calculamos o fatorial localmente no laço, se baseando no primeiro fatorial e resultado calculado, ou seja, multiplicamos o resultado anterior pelo i (incremento) do for, assim não tendo necessidade de chamar a função do fatorial nesse laço.  
 
+### Mudança no tratamento da área crítica  
+Temos que ressaltar a necessidade de tirar o reduction, pois não é compatível com uma variável GMP. Segue abaixo o erro:  
+![image](https://user-images.githubusercontent.com/73514316/203663400-ebfa0740-bc1a-40bb-ac92-3f816960f6fb.png)  
+Dito isso, implementamos a área crítica com o omp critical, onde somamos a variável temporária ao resultado global.  
+![image](https://user-images.githubusercontent.com/73514316/203663562-862ac4f8-51e4-42a1-b8a3-1122ca8157af.png)  
+
+
+### Desalocando as variáveis GMP  
+![image](https://user-images.githubusercontent.com/73514316/203663043-165f0616-e3e7-4df7-9234-8175acbedfc5.png)  
+![image](https://user-images.githubusercontent.com/73514316/203663079-5be0b2ea-97fa-4d71-b8d0-a5f9a333a331.png)  
+
+
 ### Colocando o resultado em um txt
 Tivemos que armazenar o resultado em um arquivo txt pois o print da AWS é limitado em mais ou menos 180 mil caracteres. Dito isso, criamos um txt no github com o resultado calculado que terá o resultado armazenado imediatante ao término do programa.  Segue abaixo o procedimento que usamos para gravar o resultado em "resultado_euler.txt":  
 ![image](https://user-images.githubusercontent.com/73514316/203662727-1a4cb0c5-e2a4-4c20-b90c-812c1e404551.png)  
 ![image](https://user-images.githubusercontent.com/73514316/203662747-94444b77-7f62-483d-90bf-7234fcddb23e.png)  
 ![image](https://user-images.githubusercontent.com/73514316/203662763-fa592c2e-014a-4d19-9054-ab299db137bb.png)  
 
+## Compilando o arquivo com OMP e GMP  
+![image](https://user-images.githubusercontent.com/73514316/203663752-25fa1476-55d4-43dd-a3b6-5b0e07783c51.png)  
 
+## RESULTADOS DAS EXECUÇÕES  
+# Onde comparamos o resultado  
+- Comparamos o resultado com a lista calculada e fornecida pela NASA, com 2 milhões de dígitos decimais.  
+- 
 
-
-
-
-## TÓPICOS PROFESSOR
