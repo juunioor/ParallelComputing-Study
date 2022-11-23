@@ -60,8 +60,13 @@ Tivemos que armazenar o resultado em um arquivo txt pois o print da AWS é limit
 ## Compilando o arquivo com OMP e GMP  
 ![image](https://user-images.githubusercontent.com/73514316/203663752-25fa1476-55d4-43dd-a3b6-5b0e07783c51.png)  
 
-## RESULTADOS DAS EXECUÇÕES  
-# Onde comparamos o resultado  
+## RESULTADOS DAS EXECUÇÕES
+### Observações sobre velocidade de execução e resultado  
+De início, podemos ressaltar que para conseguirmos obter um resultado com muitos dígitos, tivemos que alterar o número de bits da cláusula "mpf_init2(variavel, 2000000)" para conseguir printar mais números no "gmp_fprintf()" e colocar no arquivo.  
+
+### Onde comparamos o resultado  
 - Comparamos o resultado com a lista calculada e fornecida pela NASA, com 2 milhões de dígitos decimais.  
-- 
+- Usamos um software de comparação de arquivos chamado HexEditor (HxD), que conta a quantidade de dígitos iguais até a primeira ocorrência de um dígito diferente.  
+
+### Execuções com x iterações 
 
