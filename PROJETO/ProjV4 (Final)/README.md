@@ -106,6 +106,15 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 
 ![image](https://user-images.githubusercontent.com/62557235/203668940-da289486-65bc-4dd4-95a4-bb250e81b4d4.png)
 ***  
+### 15K ITERAÇÕES
+#### VERSÃO SERIAL
+
+![image](https://user-images.githubusercontent.com/62557235/203672495-cebe0817-5018-4dc4-adcb-abf5218fbfb4.png)
+
+#### VERSÃO PARALELA
+
+![image](https://user-images.githubusercontent.com/62557235/203672471-ab959e14-10c1-40d5-b402-5a54335a2f47.png)
+***  
 
 # ORIENTAÇÕES DO PROJETO
 
