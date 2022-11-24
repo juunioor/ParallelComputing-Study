@@ -99,9 +99,9 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 *** 
 > 10K ITERAÇÕES COM 1 THREAD
 
-![image](https://user-images.githubusercontent.com/62557235/203668940-da289486-65bc-4dd4-95a4-bb250e81b4d4.png)
+![image](https://user-images.githubusercontent.com/62557235/203668998-fca50705-dc72-4735-a5cd-5f05ed7bb71e.png)
 ***  
 > 10K ITERAÇÕES COM 2 THREADS
 
-![image](https://user-images.githubusercontent.com/62557235/203668998-fca50705-dc72-4735-a5cd-5f05ed7bb71e.png)
+![image](https://user-images.githubusercontent.com/62557235/203668940-da289486-65bc-4dd4-95a4-bb250e81b4d4.png)
 ***  
