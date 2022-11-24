@@ -34,7 +34,7 @@ em uma variável global do resultado "res". A lógica de cálculo pelo laço for
 - Tempo de execução ProjV1 - Serial = 25m36.169  
 - Tempo de execução ProjV2 - Paralela = 21m4.000  
 Portanto, houve um ganho de **4m32.169** da versão serial para versão paralela.  
-**Speedup = 1,1919714816** 
+**Speedup = 1,21532** 
 
 
 ## MUDANÇA NO LAÇO FOR DA FUNÇÃO PRINCIPAL (projeto_taylor2_V2.c)
