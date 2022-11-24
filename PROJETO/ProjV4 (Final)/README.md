@@ -105,3 +105,7 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 
 ![image](https://user-images.githubusercontent.com/62557235/203668940-da289486-65bc-4dd4-95a4-bb250e81b4d4.png)
 ***  
+
+# ORIENTAÇÕES DO PROJETO
+
+### COMO RESOLVERAM O PROBLEMA:  DESCRIÇÃO SIMPLES DO ALGORITMO E ESTRATÉGIA DE PARALELISMO ADOTADA
