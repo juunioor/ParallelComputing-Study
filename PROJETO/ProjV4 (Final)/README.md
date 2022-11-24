@@ -105,7 +105,7 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 #### VERSÃO PARALELA
 
 ![image](https://user-images.githubusercontent.com/62557235/203668940-da289486-65bc-4dd4-95a4-bb250e81b4d4.png)   
-#### SPEEDUP: 1,8970
+#### SPEEDUP: 1,0843
 ***  
 ### 15K ITERAÇÕES
 #### VERSÃO SERIAL
