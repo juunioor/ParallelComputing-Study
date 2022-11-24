@@ -69,4 +69,13 @@ De início, podemos ressaltar que para conseguirmos obter um resultado com muito
 - Usamos um software de comparação de arquivos chamado HexEditor (HxD), que conta a quantidade de dígitos iguais até a primeira ocorrência de um dígito diferente.  
 
 ### Execuções  
-
+Observação: Não temos os resultados para todas as execuções. 
+***
+> 60K ITERAÇÕES   
+   
+![image](https://user-images.githubusercontent.com/62557235/203666240-f3badd59-0ecc-403a-9f42-1ef150d685af.png)
+***
+> 200K ITERAÇÕES  
+   
+![image](https://user-images.githubusercontent.com/62557235/203666340-45edd9f0-9a8b-406a-9532-27b126574382.png)
+***
