@@ -81,4 +81,5 @@ Observação: Não temos os resultados para todas as execuções.
 ***
    
 ### COMPARANDO OS RESULTADOS GERADOS PELO TXT NO HXD
+Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da NASA e o txt do nosso resultado.
 
