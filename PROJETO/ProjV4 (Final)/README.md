@@ -83,3 +83,15 @@ Observação: Não temos os resultados para todas as execuções.
 ### COMPARANDO OS RESULTADOS GERADOS PELO TXT NO HXD
 Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da NASA e o txt do nosso resultado.
 
+***
+> 100K ITERAÇÕES    
+
+![image](https://user-images.githubusercontent.com/62557235/203667253-8d4ed204-ba77-4076-892a-11921f30544c.png)
+> QUANTIDADE DE CASAS CALCULADAS: 456.574    
+***  
+> 200K ITERAÇÕES    
+
+![image](https://user-images.githubusercontent.com/62557235/203667356-7ad64c1d-5acc-4691-9950-1ee4448e82dc.png)
+> QUANTIDADE DE CASAS CALCULADAS: 973.351   
+***  
+
