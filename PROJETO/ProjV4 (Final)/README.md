@@ -95,3 +95,4 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 > QUANTIDADE DE CASAS CALCULADAS: 973.351   
 ***  
 
+### COMPARANDO TEMPO DE EXECUÇÕES E SPEEDUP
