@@ -127,7 +127,8 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 ![image](https://user-images.githubusercontent.com/62557235/203676494-a93cc76b-d9f6-4c7c-a212-a4b09435ee8a.png)
 #### SPEEDUP: 1,0966
 ***  
-
+#### MÉDIA DO SPEEDUP DOS TESTES REALIZADOS: 1,0950
+***  
 # ORIENTAÇÕES DO PROJETO
 
 ### COMO RESOLVERAM O PROBLEMA:  DESCRIÇÃO SIMPLES DO ALGORITMO E ESTRATÉGIA DE PARALELISMO ADOTADA
