@@ -100,7 +100,7 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 ***
 
 ### 315K ITERAÇÕES
-![image](https://user-images.githubusercontent.com/62557235/203707467-d75b73ad-fdc4-4248-b59f-40133ba87d11.png)
+![image](https://user-images.githubusercontent.com/73514316/203707922-523816b1-b308-41d6-8d66-69510c7bb332.png)
 > QUANTIDADE DE CASAS CALCULADAS: 1.262.608 
 
 ### COMPARANDO TEMPO DE EXECUÇÕES E SPEEDUP
