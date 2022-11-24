@@ -75,4 +75,10 @@ Observação: Não temos os resultados para todas as execuções.
    
 ![image](https://user-images.githubusercontent.com/62557235/203666240-f3badd59-0ecc-403a-9f42-1ef150d685af.png)
 ***
+> 200K ITERAÇÕES    
+   
+![image](https://user-images.githubusercontent.com/62557235/203666340-45edd9f0-9a8b-406a-9532-27b126574382.png)
+***
+   
+### COMPARANDO OS RESULTADOS GERADOS PELO TXT NO HXD
 
