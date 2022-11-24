@@ -68,5 +68,5 @@ De início, podemos ressaltar que para conseguirmos obter um resultado com muito
 - Comparamos o resultado com a lista calculada e fornecida pela NASA, com 2 milhões de dígitos decimais.  
 - Usamos um software de comparação de arquivos chamado HexEditor (HxD), que conta a quantidade de dígitos iguais até a primeira ocorrência de um dígito diferente.  
 
-### Execuções com x iterações 
+### Execuções  
 
