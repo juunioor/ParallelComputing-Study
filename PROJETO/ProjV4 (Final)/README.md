@@ -97,11 +97,12 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 
 ### COMPARANDO TEMPO DE EXECUÇÕES E SPEEDUP
 *** 
-### 10K ITERAÇÕES VERSÃO SERIAL
+### 10K ITERAÇÕES
+#### VERSÃO SERIAL
 
 ![image](https://user-images.githubusercontent.com/62557235/203668998-fca50705-dc72-4735-a5cd-5f05ed7bb71e.png)
-***  
-### 10K ITERAÇÕES VERSÃO PARALELA
+
+#### VERSÃO PARALELA
 
 ![image](https://user-images.githubusercontent.com/62557235/203668940-da289486-65bc-4dd4-95a4-bb250e81b4d4.png)
 ***  
