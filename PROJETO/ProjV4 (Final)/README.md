@@ -114,4 +114,4 @@ Observação: O destaque vermelho é a quantidade de casas iguais entre o txt da
 - Analisando os resultados obtidos, observamos que seria possível um ganho de performance caso houvesse a intercalação de divisão entre as threads.   
 - Utilizando a biblioteca OpenMP, vimos a possibilidade de implementar o código de forma mais simples e otimizada, visando as threads. Conseguimos tratar a região crítica com o omp critical e posteriormente mais facilmente com o uso do reduction.
 - Após alguns testes, chegamos em um resultado fixo de 18 casas, algo que não conseguimos passar e adicionar mais casas ao resultado, pois usávamos diferentes tipos para retorno de funções e operações dentro do código.   
-- Ficando instagnado em 18 casas, devido chegar ao máximo do tipo da linguagem, vimos a necessidade de buscar uma solução que solucionasse o problema, a biblioteca GMP, que consegue tratar os números em quantidades exorbitantes.
+- Ficando estagnado em 18 casas, devido chegar ao máximo do tipo da linguagem, vimos a necessidade de buscar uma solução que solucionasse o problema, a biblioteca GMP, que consegue tratar os números em quantidades exorbitantes.
